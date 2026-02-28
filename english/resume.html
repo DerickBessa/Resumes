@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derick - Mobile/Web & AI Engineer</title>
+    <title>Derick - Fullstack & AI Engineer</title>
     <style>
         * {
             margin: 0;
@@ -141,14 +141,66 @@
             line-height: 1.35;
         }
 
+        .project {
+            margin-bottom: 8px;
+        }
+
+        .project-header {
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        .project-header a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        .project-description {
+            line-height: 1.4;
+        }
+
+        .project ul {
+            margin-left: 18px;
+            margin-top: 3px;
+        }
+
+        .project li {
+            margin-bottom: 3px;
+            line-height: 1.35;
+        }
+
         .education-item {
             margin-bottom: 6px;
         }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .education-school {
+            font-weight: bold;
+        }
+
+        .education-date {
+            font-style: italic;
+            font-size: 9.5pt;
+            color: #333;
+        }
+
+        .education-degree {
+            font-size: 10pt;
+        }
+
+        strong.metric {
+            font-weight: bold;
+        }
         .download-btn-en {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        z-index: 1000; /* garante que fique acima de outros elementos */
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
         }
 
         .download-btn-en a {
@@ -167,7 +219,6 @@
             background: #093b14;
         }
 
-        /* Responsividade */
         @media (max-width: 768px) {
             .download-btn-en {
                 top: 15px;
@@ -192,9 +243,8 @@
     </style>
 </head>
 <body>
-
     <div class="download-btn-en">
-        <a href="resume.pdf" download>
+        <a href="resume-en.pdf" download>
             Download PDF (EN)
         </a>
     </div>
@@ -202,7 +252,7 @@
         <!-- Header -->
         <div class="header">
             <h1>DERICK BESSA</h1>
-            <div class="title">Junior Mobile/Web & AI Engineer</div>
+            <div class="title"> Dev Fullstack & AI Engineer</div>
             <div class="contact">
                 <a href="mailto:derickbessa12@gmail.com">derickbessa12@gmail.com</a> |
                 <a href="https://github.com/DerickBessa" target="_blank">github.com/DerickBessa</a> |
@@ -214,18 +264,18 @@
         <div class="section">
             <div class="section-title">Professional Summary</div>
             <div class="summary">
-                Full-stack Software Engineer with <strong>2+ years</strong> of experience developing <strong>AI-powered applications</strong> and <strong>end-to-end scalable systems</strong> for web and mobile. Proven expertise in architecting <strong>Computer Vision systems (SFA - Federal Automotive Scanner)</strong> in production, including <strong>image ingestion, embeddings generation, CNN models (YOLO)</strong> for edge detection, advanced pre- and post-processing, and <strong>OCR-based character recognition</strong> integrated with a <strong>structured backend</strong> (Java/Spring Boot) and <strong>relational databases</strong> (PostgreSQL/SQLite), achieving <strong>85%+ query performance improvement</strong> over conventional methods. Professional proficiency in <strong>TypeScript/Angular and JavaScript/React frontend</strong>, <strong>Java/Spring Boot backend</strong> (REST/GraphQL APIs, authentication) and <strong>PostgreSQL</strong>. Delivered <strong>automated web and mobile deployments</strong> with <strong>CI/CD pipelines in Vercel and GitHub Actions</strong>, accelerating feature delivery and ensuring production stability. Additionally, optimized interface flows on a <strong>language learning platform</strong>, increasing <strong>speed by 60%</strong> and reducing <strong>support requests by 45%</strong>, directly impacting <strong>productivity, user retention</strong>, and <strong>recurring revenue</strong>.
+                <strong>Full-stack & AI Engineer</strong> with <strong>1+ year of experience</strong> developing <strong>end-to-end scalable systems</strong> for <strong>web and mobile</strong> with a focus on <strong>Artificial Intelligence models</strong>. Proven experience designing <strong>Computer Vision systems SFA (Federal Automotive Scanner)</strong> in production, with <strong>image ingestion, embedding generation, CNN models (YOLO)</strong> for edge detection, advanced image pre- and post-processing, and <strong>OCR-based character recognition</strong> integrated with a <strong>structured backend</strong> (Java/SpringBoot) and <strong>relational database</strong> (PostgreSQL/SQLite), achieving <strong>+85% query performance optimization</strong> compared to conventional methods. Professional proficiency in <strong>TypeScript/Angular and JavaScript/React frontend</strong>, <strong>Java/Spring Boot backend</strong> (REST/GraphQL APIs, authentication) and <strong>PostgreSQL</strong>. Executed <strong>automated web and mobile application deployment</strong> using <strong>CI/CD pipelines on Vercel and GitHub Actions</strong>, <strong>accelerating feature delivery</strong> and <strong>ensuring production stability</strong>. Additionally, at a contracted company, optimized interface flows in a <strong>language learning platform</strong>, increasing <strong>usage speed</strong> by <strong>60%</strong> and reducing <strong>support requests</strong> by <strong>45%</strong>, generating a direct impact on <strong>productivity</strong>, <strong>user retention</strong> and <strong>recurring revenue</strong>.
         </div>
 
         <!-- Technical Skills -->
         <div class="section" style="margin-top: 18px;">
             <div class="section-title">Technical Skills</div>
             <div class="skills-grid">
-                <div class="skill-category"><strong>AI & Computer Vision:</strong> MediaPipe, OCR, YOLOv8 & YOLOv11, PyTorch, Data Augmentation, Early Stopping, Embeddings Generation, Recognition and Classification Models (BBox, Poses, Keypoints, Faces)</div>
+                <div class="skill-category"><strong>AI & Computer Vision:</strong> MediaPipe, OCR, YOLOv8 & YOLOv11, Pytorch, Data Augmentation, Early Stopping, Embedding Generation, Recognition and Classification Models (BBox, Poses, Keypoints, Faces)</div>
                 <div class="skill-category"><strong>Languages & Frameworks:</strong> TypeScript, JavaScript, Angular, React, Java, Spring Boot, HTML/SCSS, TailwindCSS</div>
-                <div class="skill-category"><strong>Database & Backend:</strong> PostgreSQL, SQLite, REST & GraphQL APIs, Authentication</div>
+                <div class="skill-category"><strong>Database & Backend:</strong> PostgreSQL, SQLite, REST APIs, GraphQL, Authentication</div>
                 <div class="skill-category"><strong>DevOps & CI/CD:</strong> Docker, GitHub Actions, Vercel, Automated Deployment</div>
-                <div class="skill-category"><strong>Testing & Quality:</strong> React Testing Library, Postman, TDD, Agile (Trello & Jira)</div>
+                <div class="skill-category"><strong>Testing & Quality:</strong> React Testing Library, Postman, TDD, Agile (Trello and Jira)</div>
             </div>
         </div>
 
@@ -238,12 +288,12 @@
                     <div class="job-title-company">LABVICIA – IFCE | Campus Fortaleza</div>
                     <div class="job-date">2025 – Present</div>
                 </div>
-                <div class="job-position">Fullstack Developer & AI Engineer</div>
+                <div class="job-position">Full-stack Developer & AI Engineer</div>
                 <ul>
-                    <li>Led <strong>internationalization of the system into 4 languages</strong>, significantly increasing <strong>platform scalability and global reach</strong>.</li>
-                    <li>Improved <strong>UI/UX and performance</strong> using <strong>TypeScript, Angular, and Java/Spring Boot</strong>, including <strong>component modularization</strong>, styled pagination, REST request optimization, and PostgreSQL query improvements, resulting in <strong>60% faster screens</strong> and <strong>40% fewer unnecessary DB calls</strong>.</li>
-                    <li>Applied <strong>agile methodologies</strong>, detailed technical reporting, feedback loops, and system maintenance, ensuring <strong>clean code</strong>, <strong>layered architecture</strong>, and <strong>long-term scalability</strong>.</li>
-                    <li>Delivered <strong>performance optimizations and modularization</strong> accelerating internal processes by <strong>85%</strong>, improving <strong>operational efficiency, user retention</strong>, and direct impact on <strong>recurring revenue</strong>.</li>
+                    <li>Led <strong>system internationalization in 4 languages</strong>, significantly increasing <strong>platform scalability and global reach</strong>.</li>
+                    <li>Developed <strong>UI/UX and performance improvements</strong> using <strong>TypeScript, Angular and Java/Spring Boot</strong>, including <strong>component modularization</strong>, styled pagination, optimized REST requests and PostgreSQL queries, resulting in <strong>60% faster screens</strong> and <strong>40% fewer unnecessary database calls</strong>.</li>
+                    <li>Applied <strong>Agile methodologies</strong>, detailed technical reports, feedback loops, and system maintenance, ensuring <strong>clean code</strong>, <strong>layered architecture</strong> and <strong>long-term scalability</strong>.</li>
+                    <li>Delivered <strong>performance optimizations and modularization</strong> that accelerated internal processes by <strong>85%</strong>, improving <strong>operational efficiency</strong>, user retention, and directly impacting <strong>platform recurring revenue</strong>.</li>
                 </ul>
             </div>
 
@@ -254,26 +304,26 @@
                 </div>
                 <div class="job-position">AI & Computer Vision Researcher</div>
                 <ul>
-                    <li>Developed <strong>CNN models</strong> using <strong>YOLO and MediaPipe</strong> for detecting <strong>objects, edges, and hands</strong>, applying <strong>pre-processing with OpenCV, Data Augmentation, and Early Stopping</strong>, reaching <strong>85% accuracy</strong> and precision levels between <strong>90%-97%</strong> in recognition and classification tasks.</li>
-                    <li>Initiated research for <strong>inclusion of deaf users</strong>, testing CNNs, VLMs, and LLMs for automatic translation of <strong>Brazilian Sign Language (LIBRAS)</strong>, with plans to integrate <strong>backend and frontend</strong> into a user-friendly interface.</li>
-                    <li>Contributed to building a <strong>company function display application</strong>, leading <strong>Dart/Flutter frontend</strong> and implementing <strong>general object detection</strong> using YOLO with a robust Kaggle dataset, ensuring real-world performance and reliability.</li>
-                    <li>Organized and documented technical processes, optimizing <strong>development workflow</strong> and integrating <strong>Machine Learning, Deep Learning, and Digital Image Processing</strong> in applied projects.</li>
+                    <li>Developed <strong>CNN models</strong> using <strong>YOLO and MediaPipe</strong> for <strong>object, edge, and hand detection</strong>, applying <strong>OpenCV preprocessing, Data Augmentation and Early Stopping</strong>, achieving <strong>85% accuracy</strong> and precision between <strong>90%-97%</strong> in recognition and classification tasks.</li>
+                    <li>Started research on <strong>inclusion for deaf people</strong>, testing and using CNNs, VLMs and LLMs for automatic detection and translation of <strong>Brazilian Sign Language (LIBRAS)</strong>, aiming to build an integrated <strong>backend and frontend system</strong> with an intuitive, user-friendly interface.</li>
+                    <li>Contributed to a <strong>company feature display application</strong>, leading the <strong>frontend in Dart/Flutter</strong> and implementing a <strong>general object detection feature</strong> using YOLO with a robust Kaggle dataset, ensuring performance and reliability in real test environments.</li>
+                    <li>Organized and documented technical processes, optimizing <strong>development workflow</strong> and integrating <strong>Machine Learning, Deep Learning, and Digital Image Processing</strong> practices into applied projects.</li>
                 </ul>
             </div>
 
             <div class="job">
                 <div class="job-header">
-                    <div class="job-title-company">TáNaLista – Founded & Led Project</div>
+                    <div class="job-title-company">TáNaLista – Founded and Led Project</div>
                     <div class="job-date">2026 – Present</div>
                 </div>
                 <div class="job-position">Founder & Lead Engineer</div>
                 <ul>
-                    <li>Conceived and currently leading development of <strong>TáNaLista</strong>, an in-development event guest management platform, leveraging <strong>Artificial Intelligence (AI) and Machine Learning (ML)</strong> for <strong>secure and intelligent check-in</strong> via QR Code, <strong>facial recognition</strong>, and <strong>fingerprint scanning</strong>.</li>
-                    <li>Designing full-stack architecture with a <strong>robust backend</strong> (relational database) and <strong>intuitive frontend</strong> (web & mobile), structuring differentiated permissions for <strong>organizer, ADM, and staff</strong>, focusing on <strong>scalability and full event customization</strong>.</li>
-                    <li>Implementing advanced <strong>Computer Vision</strong> features using <strong>YOLO and MediaPipe</strong> for detecting <strong>faces, hands, and fingerprints</strong>, integrated with real-time validation to enable <strong>automated secure check-in</strong> and fraud prevention.</li>
-                    <li>Developing an <strong>intelligent chatbot</strong> integrated with the platform, leveraging AI for automated guest support, answering queries, and proactive event notifications.</li>
-                    <li>Planning <strong>comprehensive event management</strong> features, including automatic notifications, gift lists, recurring guest tracking, company/group management, and full event personalization, optimizing organizer and guest experience.</li>
-                    <li>Organizing project structure following <strong>best coding practices, modularization, and CI/CD pipelines</strong>, ensuring <strong>simplified maintenance, easy AI/ML integration</strong>, and scalability for high-complexity events.</li>
+                    <li>Designed and lead the development of <strong>TáNaLista</strong>, an event access and guest management platform, using <strong>AI & ML</strong> to ensure <strong>secure and intelligent check-in</strong> via QR Code, <strong>facial recognition</strong> and <strong>fingerprint authentication</strong>.</li>
+                    <li>Architected a <strong>full-stack system</strong> with robust backend and intuitive web & mobile frontend, structuring differentiated permissions for <strong>organizer, admin, and staff</strong> with focus on <strong>scalability and full event customization</strong>.</li>
+                    <li>Implemented advanced <strong>Computer Vision</strong> features using <strong>YOLO & MediaPipe</strong> for detecting <strong>faces, hands, and fingerprints</strong>, integrated with real-time validation for <strong>secure automated check-in</strong> and fraud prevention.</li>
+                    <li>Developed an <strong>intelligent chatbot</strong> integrated into the platform for automated guest support and proactive notifications regarding absent guests.</li>
+                    <li>Included full <strong>event management features</strong>, including automatic notifications, gift lists, recurring guest history, companion tracking, and full event personalization, optimizing both organizer and guest experience.</li>
+                    <li>Structured the project following <strong>best coding practices, modularization, and CI/CD pipelines</strong>, ensuring <strong>easy maintenance, integration of new AI/ML features</strong>, and scalability for complex events.</li>
                 </ul>
             </div>
 
@@ -281,7 +331,7 @@
         <div class="section">
             <div class="section-title">Education & Languages</div>
             <div class="education-item">
-                <strong>Bachelor in Computer Science</strong> | IFCE - Macaracanaú Campus | 2024 - ongoing
+                <strong>Bachelor’s in Computer Science</strong> | IFCE - Macaracanaú Campus | 2024 - Present
             </div>
             <div class="education-item" style="margin-top: 4px;">
                 <strong>Languages:</strong> English (Advanced), Portuguese (Native)
