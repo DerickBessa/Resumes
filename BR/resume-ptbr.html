@@ -13,17 +13,17 @@
 
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.3;
+            line-height: 1.20;
             color: #000;
             background: #f5f5f5;
-            font-size: 10.5pt;
+            font-size: 10.2pt;
         }
 
         .container {
             max-width: 210mm;
             margin: 0 auto;
             background: #fff;
-            padding: 0.75in;
+            padding: 0.55in;
             min-height: 297mm;
             position: relative;
         }
@@ -33,7 +33,7 @@
                 background: #fff;
             }
             .container {
-                padding: 0.5in;
+                padding: 0.45in;
                 margin: 0;
             }
         }
@@ -75,7 +75,7 @@
 
         /* Section Headers */
         .section {
-            margin-bottom: 14px;
+            margin-bottom: 8px;
         }
 
         .section-title {
@@ -83,7 +83,7 @@
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
             border-bottom: 1px solid #000;
             padding-bottom: 2px;
         }
@@ -96,7 +96,7 @@
 
         /* Skills */
         .skills-grid {
-            line-height: 1.5;
+            line-height: 1.4;
         }
 
         .skill-category {
@@ -142,7 +142,7 @@
         }
 
         .job li {
-            margin-bottom: 3px;
+            margin-bottom: 2px;
             line-height: 1.35;
         }
 
@@ -249,6 +249,35 @@
                 font-size: 0.8rem;
             }
         }
+        @media print {
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0.5in;
+        }
+
+        /* Impede quebra de página automática */
+        .section,
+        .job,
+        .education-item {
+            page-break-inside: avoid;
+            break-inside: avoid;
+        }
+
+        /* Remove qualquer quebra extra */
+        html, body {
+            height: auto;
+        }
+    }
     </style>
 </head>
 <body>
@@ -274,123 +303,91 @@
             <div class="section-title">Resumo Profissional</div>
             <div class="summary">
                <p>
-                <strong>Desenvolvedor Fullstack & AI Engineer com +1 ano de experiência profissional, especializado na construção de sistemas escaláveis e soluções baseadas em Visão Computacional e automação preditiva.</strong> Fui responsável pela arquitetura e desenvolvimento do 
-                <strong>SFA (Scanner Federal Automobilístico)</strong>, 
-                sistema de visão computacional em produção com 
-                <span>pipeline de ingestão de imagens</span>, 
-                <span>geração de embeddings</span>, 
-                <strong>modelos baseados em YOLO</strong> para detecção de bordas e 
-                <strong>OCR</strong> para reconhecimento de caracteres, 
-                integrados a <strong>backend estruturado em Java/Spring Boot</strong> e 
-                <strong>bancos relacionais (PostgreSQL/SQLite)</strong>, 
-                alcançando <strong>85% de otimização</strong> no desempenho de consultas.
+                Full-Stack Developer & AI Engineer especializado na construção de sistemas escaláveis e aplicações de Visão Computacional em produção. Experiência liderando arquitetura de APIs (Java/Spring Boot) e interfaces modernas (Angular/React), integrando modelos de Deep Learning a pipelines completos. Histórico comprovado de otimização de performance, com ganhos de até 60% em velocidade de aplicação e 40% na redução de requisições ao banco.
                 </p>
 
-                <p>
-                Experiência em desenvolvimento frontend com 
-                <strong>TypeScript (Angular)</strong> e 
-                <strong>React</strong>, 
-                backend com <strong>Java/Spring Boot</strong> 
-                (APIs REST/GraphQL e autenticação) e estruturação de 
-                <strong>pipelines CI/CD com GitHub Actions e Vercel</strong> para deploy automatizado. 
-
-                Atuação em otimização de fluxos de interface em plataforma educacional, 
-                resultando em <strong>60% de aumento na velocidade de uso</strong> e 
-                <strong>45% de redução em solicitações de suporte</strong>, 
-                gerando impacto direto em 
-                <strong>retenção de usuários</strong> e 
-                <strong>receita recorrente</strong>.
-                </p>
-        </div>
-        
-        <!-- Technical Skills -->
-        <div class="section" style="margin-top: 18px;">
+                <div class="section" style="margin-top: 18px;">
             <div class="section-title">Habilidades Técnicas</div>
-            <div class="skills-grid">
+                <div class="skills-grid">
 
-                <div class="skill-category">
-                    <strong>Inteligência Artificial & Visão Computacional:</strong>
-                    YOLOv8, YOLOv11, PyTorch, MediaPipe, OCR, Geração de Embeddings,
-                    Data Augmentation, Modelos de Detecção (BBox), Poses, Keypoints e Reconhecimento Facial
+                    <div class="skill-category">
+                        <strong>Inteligência Artificial & Visão Computacional:</strong>
+                        YOLO, PyTorch, MediaPipe, OCR, Geração de Embeddings,
+                        Data Augmentation, Modelos CNN.
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Frontend:</strong>
+                        TypeScript, JavaScript, Angular, React, HTML, SCSS, Tailwind CSS
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Backend:</strong>
+                        Java, Spring Boot, APIs REST, GraphQL, Autenticação
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Bancos de Dados:</strong>
+                        PostgreSQL, SQLite
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>DevOps & Entrega Contínua:</strong>
+                        Docker, GitHub Actions, Vercel, Deploy Automatizado
+                    </div>
+
+                    <div class="skill-category">
+                        <strong>Testes & Metodologias:</strong>
+                        React Testing Library, Postman, TDD,
+                        Metodologias Ágeis (Trello, Jira)
+                    </div>
+
                 </div>
-
-                <div class="skill-category">
-                    <strong>Frontend:</strong>
-                    TypeScript, JavaScript, Angular, React, HTML, SCSS, Tailwind CSS
-                </div>
-
-                <div class="skill-category">
-                    <strong>Backend:</strong>
-                    Java, Spring Boot, APIs REST, GraphQL, Autenticação
-                </div>
-
-                <div class="skill-category">
-                    <strong>Bancos de Dados:</strong>
-                    PostgreSQL, SQLite
-                </div>
-
-                <div class="skill-category">
-                    <strong>DevOps & Entrega Contínua:</strong>
-                    Docker, GitHub Actions, Vercel, Deploy Automatizado
-                </div>
-
-                <div class="skill-category">
-                    <strong>Testes & Metodologias:</strong>
-                    React Testing Library, Postman, TDD,
-                    Metodologias Ágeis (Trello, Jira)
-                </div>
-
-            </div>
         </div>
 
         <!-- Professional Experience -->
-        <div class="section">
-            <div class="section-title">Professional Experience</div>
+        <div class="section" style="margin-top: 18px;" >
+            <div class="section-title">Experiência profissional</div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title-company">LABVICIA – IFCE | Campus Fortaleza</div>
-                    <div class="job-date">2025 – Atual</div>
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title-company">LABVICIA – IFCE | Campus Fortaleza</div>
+                        <div class="job-date">2025 – Atual</div>
+                    </div>
+                    <div class="job-position">Fullstack Developer & AI Engineer</div>
+                    <ul>
+                        <li>Liderança técnica na internacionalização da plataforma para <strong>4 idiomas</strong>, estruturando arquitetura escalável e preparada para expansão.</li>
+                        <li>Refatoração full-stack (<strong>Angular + Spring Boot + PostgreSQL</strong>) com modularização e otimização de queries críticas.</li>
+                        <li>Redução de <strong>40% nas requisições ao banco</strong>, aumento de <strong>60% na velocidade das telas</strong> e aceleração de <strong>85% em processos internos</strong>.</li>
+                    </ul>
                 </div>
-                <div class="job-position">Fullstack Developer & AI Engineer</div>
-                <ul>
-                    <li>Liderança na <strong>internacionalização da plataforma para 4 idiomas</strong>, ampliando alcance e escalabilidade do sistema.</li>
-                    <li>Responsável por melhorias de <strong>performance e UI/UX</strong> com <strong>TypeScript, Angular e Java/Spring Boot</strong>, incluindo <strong>modularização de componentes</strong>, paginação otimizada, redução de requisições REST e otimização de queries no PostgreSQL.</li>
-                    <li>Alcancei <strong>60% de aumento na velocidade das telas</strong> e <strong>40% de redução nas chamadas desnecessárias ao banco</strong>.</li>
-                    <li>Aplicação de <strong>arquitetura em camadas</strong>, boas práticas de código e metodologias ágeis, garantindo manutenção escalável e sustentável.</li>
-                    <li>Otimizações estruturais que aceleraram processos internos em <strong>85%</strong>, impactando diretamente a eficiência operacional e retenção de usuários.</li>
-                </ul>
-            </div>
 
-           <div class="job">
-                <div class="job-header">
-                    <div class="job-title-company">LAPISCO – IFCE | Campus Fortaleza</div>
-                    <div class="job-date">2024 – Atual</div>
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title-company">LAPISCO – IFCE | Campus Fortaleza</div>
+                        <div class="job-date">2024 – Atual</div>
+                    </div>
+                    <div class="job-position">AI & Computer Vision Researcher</div>
+                    <ul>
+                        <li>Treinamento e validação de modelos <strong>YOLOv8/v11 e MediaPipe</strong>, alcançando até <strong>97% de precisão</strong> em cenários reais.</li>
+                        <li>Estruturação de <strong>pipeline completo de Machine Learning</strong> com Data Augmentation, Early Stopping e avaliação por <strong>mAP e F1-score</strong>.</li>
+                        <li>Desenvolvimento de aplicação <strong>Flutter com inferência em tempo real baseada em YOLO</strong> e arquitetura para tradução automática de <strong>LIBRAS</strong> com integração via API.</li>
+                    </ul>
                 </div>
-                <div class="job-position">AI & Computer Vision Researcher</div>
-                <ul>
-                    <li>Desenvolvi e treinei <strong>modelos de Deep Learning (YOLOv8/v11 e MediaPipe)</strong> para detecção de <strong>objetos, bordas e mãos</strong>, aplicando <strong>pré-processamento com OpenCV, Data Augmentation e Early Stopping</strong>, alcançando <strong>85% de acurácia</strong> e até <strong>97% de precisão</strong> em cenários reais de teste.</li>
-                    <li>Estruturei <strong>pipeline de treinamento e validação</strong> com otimização de hiperparâmetros e avaliação por métricas como <strong>mAP e F1-score</strong>, garantindo maior robustez e generalização dos modelos.</li>
-                    <li>Conduzi pesquisa aplicada voltada à <strong>inclusão de pessoas surdas</strong>, utilizando <strong>CNNs, VLMs e LLMs</strong> para detecção e tradução automática da <strong>LIBRAS</strong>, com arquitetura planejada para integração <strong>full-stack (API + interface interativa)</strong>.</li>
-                    <li>Liderei o desenvolvimento <strong>frontend em Flutter</strong> para aplicação com <strong>detecção de objetos em tempo real via YOLO</strong>, garantindo estabilidade, performance e confiabilidade em ambiente de validação prática.</li>
-                    <li>Documentei arquitetura, experimentos e decisões técnicas, padronizando <strong>workflows de Machine Learning</strong> e reduzindo retrabalho no time de pesquisa.</li>
-                </ul>
-            </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title-company">TáNaLista – Projeto Fundado e Liderado</div>
-                    <div class="job-date">2026 – Atual</div>
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title-company">TáNaLista – Projeto Fundado e Liderado</div>
+                        <div class="job-date">2026 – Atual</div>
+                    </div>
+                    <div class="job-position">Founder & Lead Engineer</div>
+                    <ul>
+                        <li>Arquitetura e desenvolvimento de <strong>SaaS full-stack</strong> para gestão inteligente de acesso a eventos.</li>
+                        <li>Implementação de <strong>controle granular de permissões</strong> e backend relacional estruturado.</li>
+                        <li>Integração de <strong>validação biométrica em tempo real</strong> com YOLO e MediaPipe, além de estruturação de <strong>CI/CD e modularização</strong> para escalabilidade.</li>
+                    </ul>
                 </div>
-                <div class="job-position">Founder & Lead Engineer</div>
-                <ul>
-                    <li>Concebi e lidero o desenvolvimento do <strong>TáNaLista</strong>, plataforma <strong>SaaS de gestão inteligente de acesso para eventos</strong>, integrando <strong>IA e Machine Learning</strong> para check-in seguro via <strong>QR Code, reconhecimento facial e biometria digital</strong>.</li>
-                    <li>Projetei <strong>arquitetura full-stack escalável</strong> com backend relacional e <strong>controle granular de permissões (Organizador, ADM e Staff)</strong>, garantindo segurança, alta disponibilidade e personalização total de eventos.</li>
-                    <li>Implementei <strong>validação biométrica em tempo real</strong> utilizando <strong>YOLO e MediaPipe</strong> para prevenção de fraudes e automação inteligente de processos presenciais.</li>
-                    <li>Desenvolvi <strong>chatbot inteligente integrado</strong> à plataforma para atendimento automatizado, suporte a convidados e notificações proativas, reduzindo dependência de suporte humano.</li>
-                    <li>Estruturei <strong>modularização de código e pipelines CI/CD</strong>, permitindo escalabilidade horizontal, manutenção simplificada e integração contínua de novas funcionalidades de IA/ML.</li>
-                </ul>
-            </div>
+
 
         <!-- Education & Languages -->
         <div class="section">
@@ -398,7 +395,7 @@
             <div class="education-item">
                 <strong>Bacharelado em Ciência da Computação</strong> | IFCE - Campus | 2024 - em andamento
             </div>
-            <div class="education-item" style="margin-top: 4px;">
+            <div class="education-item" style="margin-top: 2px;">
                 <strong>Idiomas:</strong> Inglês(Avançado), Português (Nativo)
             </div>
         </div>
