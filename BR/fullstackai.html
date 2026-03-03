@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Derick Bessa - Full-Stack & AI Engineer</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    color: #000;
+    background: #f5f5f5;
+    font-size: 10.2pt;
+}
+.container {
+    max-width: 210mm;
+    margin: 0 auto;
+    background: #fff;
+    padding: 0.55in;
+    min-height: 297mm;
+    position: relative;
+}
+@media print {
+    body { background: #fff; }
+    .container { padding: 0.5in; margin:0; }
+}
+/* Header */
+.header { text-align: center; margin-bottom: 16px; border-bottom: 1px solid #000; padding-bottom: 8px; }
+.header h1 { font-size: 20pt; font-weight: bold; margin-bottom: 4px; letter-spacing: 1px; }
+.header .title { font-size: 11pt; margin-bottom: 6px; font-weight: normal; }
+.contact { font-size: 9.5pt; line-height: 1.4; }
+.contact a { color: #000; text-decoration: none; }
+.contact a:hover { text-decoration: underline; }
+
+/* Sections */
+.section { margin-bottom: 10px; }
+.section-title { font-size: 11pt; font-weight: bold; text-transform: uppercase; margin-bottom: 4px; border-bottom: 1px solid #000; padding-bottom: 2px; }
+.summary { text-align: justify; line-height: 1.4; }
+
+/* Jobs */
+.job { margin-bottom: 10px; }
+.job-header { display: flex; justify-content: space-between; margin-bottom: 2px; }
+.job-title-company { font-weight: bold; font-size: 10.5pt; }
+.job-date { font-style: italic; font-size: 9.5pt; color: #333; }
+.job-position { font-style: italic; margin-bottom: 4px; font-size: 10pt; }
+.job ul { margin-left: 18px; margin-top: 3px; }
+.job li { margin-bottom: 2px; line-height: 1.35; }
+
+/* Skills */
+.skills-grid { line-height: 1.4; }
+.skill-category { margin-bottom: 4px; }
+.skill-category strong { font-weight: bold; }
+
+/* Download button */
+.download-btn { position: absolute; top: 30px; right: 30px; z-index:1000; }
+.download-btn a {
+    padding: 15px 25px;
+    background: #0b511d;
+    color:#fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    transition:0.2s;
+}
+.download-btn a:hover { background:#093b14; }
+
+/* Responsividade */
+@media (max-width:768px){ .download-btn{ top:15px; right:15px;} .download-btn a{ padding:10px 18px; font-size:0.9rem; } }
+@media (max-width:480px){ .download-btn{ top:10px; right:10px;} .download-btn a{ padding:8px 14px; font-size:0.8rem; } }
+@media print {
+    @page { size:A4; margin:0; }
+    body{ margin:0;}
+    .container{ margin:0; padding:0.5in;}
+    .section, .job{ page-break-inside:avoid; break-inside:avoid;}
+}
+</style>
+</head>
+<body>
+<div class="download-btn">
+    <a href="DerickBessa-FullStack.pdf" download>Download PDF</a>
+</div>
+
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>DERICK BESSA</h1>
+        <div class="title">Full-Stack Developer & AI Engineer</div>
+        <div class="contact">
+            <a href="mailto:derickbessa12@gmail.com">Email: derickbessa12@gmail.com</a> |
+            <a href="https://github.com/DerickBessa" target="_blank">GitHub: github.com/DerickBessa</a> |
+            <a href="https://derickbessa.vercel.app" target="_blank">Portfolio</a>
+        </div>
+    </div>
+
+    <!-- Summary -->
+    <div class="section">
+        <div class="section-title">Resumo Profissional</div>
+        <div class="summary">
+            Desenvolvedor Full-Stack com experiência em <strong>Angular, React, Java, Spring Boot</strong> e bancos de dados relacionais. Especializado em arquitetura de sistemas escaláveis, integração de APIs e construção de pipelines analíticos. Diferencial em projetos que aplicam <strong>Inteligência Artificial</strong> para autenticação, análise de dados e visão computacional. Histórico de otimização de performance, aumentando velocidade de aplicações em até <strong>60%</strong> e reduzindo requisições críticas ao banco em <strong>40%</strong>.
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+        <div class="section-title">Habilidades Técnicas</div>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>Frontend:</strong> Angular, React, TypeScript, JavaScript, HTML, SCSS, Tailwind CSS</div>
+            <div class="skill-category"><strong>Backend:</strong> Java, Spring Boot, APIs REST, GraphQL, Autenticação, Segurança</div>
+            <div class="skill-category"><strong>Bancos de Dados:</strong> PostgreSQL, SQLite, Modelagem Relacional, Otimização de Queries</div>
+            <div class="skill-category"><strong>DevOps & CI/CD:</strong> Docker, GitHub Actions, Vercel, Deploy Automatizado</div>
+            <div class="skill-category"><strong>Inteligência Artificial:</strong> YOLO, PyTorch, MediaPipe, OCR, Embeddings, Data Augmentation, Modelos CNN</div>
+            <div class="skill-category"><strong>Testes & Metodologias:</strong> React Testing Library, Postman, TDD, Agile (Jira, Trello)</div>
+        </div> 
+    </div>
+
+    <!-- Professional Experience -->
+    <div class="section">
+        <div class="section-title">Experiência Profissional</div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LABVICIA – IFCE | Campus Fortaleza</div>
+                <div class="job-date">2025 – Atual</div>
+            </div>
+            <div class="job-position">Full-Stack Developer & AI Engineer</div>
+            <ul>
+                <li>Refatoração full-stack (Angular + Spring Boot + PostgreSQL) com modularização e otimização de queries críticas.</li>
+                <li>Redução de <strong>40%</strong> nas requisições ao banco e aumento de <strong>60%</strong> na velocidade das telas.</li>
+                <li>Integração de modelos de IA para analytics e suporte a decisões operacionais.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LAPISCO – IFCE | Campus Fortaleza</div>
+                <div class="job-date">2024 – Atual</div>
+            </div>
+            <div class="job-position">AI & Computer Vision Researcher</div>
+            <ul>
+                <li>Treinamento e validação de modelos de visão computacional (YOLOv8, MediaPipe) com precisão de até <strong>97%</strong>.</li>
+                <li>Criação de pipelines ML completos com Data Augmentation, Early Stopping e avaliação por mAP e F1-score.</li>
+                <li>Desenvolvimento de apps Flutter com inferência em tempo real e integração API de tradução automática de LIBRAS.</li>
+            </ul>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">TáNaLista – Projeto Fundado e Liderado</div>
+                <div class="job-date">2026 – Atual</div>
+            </div>
+            <div class="job-position">Founder & Lead Engineer</div>
+            <ul>
+                <li>Desenvolvimento de SaaS full-stack para gestão inteligente de eventos.</li>
+                <li>Controle granular de permissões, backend relacional estruturado e integração de autenticação biométrica.</li>
+                <li>CI/CD completo e modularização para escalabilidade, com IA como camada diferencial de segurança.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Education & Languages -->
+    <div class="section">
+        <div class="section-title">Formação & Idiomas</div>
+        <div class="education-item"><strong>Bacharelado em Ciência da Computação</strong> – IFCE | 2024 – em andamento</div>
+        <div class="education-item" style="margin-top: 2px;"><strong>Idiomas:</strong> Português (Nativo), Inglês (Avançado)</div>
+    </div>
