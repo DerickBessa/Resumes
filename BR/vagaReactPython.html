@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Derick - Desenvolvedor Fullstack</title>
+</head>
+<body>
+
+    <style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.2;
+    color: #000;
+    background: #f5f5f5;
+    font-size: 10.2pt;
+}
+.container {
+    max-width: 210mm;
+    margin: 0 auto;
+    background: #fff;
+    padding: 0.55in;
+    min-height: 297mm;
+    position: relative;
+}
+@media print {
+    body { background: #fff; }
+    .container { padding: 0.5in; margin:0; }
+}
+/* Header */
+.header { text-align: center; margin-bottom: 16px; border-bottom: 1px solid #000; padding-bottom: 8px; }
+.header h1 { font-size: 20pt; font-weight: bold; margin-bottom: 4px; letter-spacing: 1px; }
+.header .title { font-size: 11pt; margin-bottom: 6px; font-weight: normal; }
+.contact { font-size: 9.5pt; line-height: 1.4; }
+.contact a { color: #000; text-decoration: none; }
+.contact a:hover { text-decoration: underline; }
+
+/* Sections */
+.section { margin-bottom: 10px; }
+.section-title { font-size: 11pt; font-weight: bold; text-transform: uppercase; margin-bottom: 4px; border-bottom: 1px solid #000; padding-bottom: 2px; }
+.summary { text-align: justify; line-height: 1.4; }
+
+/* Jobs */
+.job { margin-bottom: 10px; }
+.job-header { display: flex; justify-content: space-between; margin-bottom: 2px; }
+.job-title-company { font-weight: bold; font-size: 10.5pt; }
+.job-date { font-style: italic; font-size: 9.5pt; color: #333; }
+.job-position { font-style: italic; margin-bottom: 4px; font-size: 10pt; }
+.job ul { margin-left: 18px; margin-top: 3px; }
+.job li { margin-bottom: 2px; line-height: 1.35; }
+
+/* Skills */
+.skills-grid { line-height: 1.4; }
+.skill-category { margin-bottom: 4px; }
+.skill-category strong { font-weight: bold; }
+
+/* Download button */
+.download-btn { position: absolute; top: 30px; right: 30px; z-index:1000; }
+.download-btn a {
+    padding: 15px 25px;
+    background: #0b511d;
+    color:#fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-block;
+    transition:0.2s;
+}
+.download-btn a:hover { background:#093b14; }
+
+/* Responsividade */
+@media (max-width:768px){ .download-btn{ top:15px; right:15px;} .download-btn a{ padding:10px 18px; font-size:0.9rem; } }
+@media (max-width:480px){ .download-btn{ top:10px; right:10px;} .download-btn a{ padding:8px 14px; font-size:0.8rem; } }
+@media print {
+    @page { size:A4; margin:0; }
+    body{ margin:0;}
+    .container{ margin:0; padding:0.5in;}
+    .section, .job{ page-break-inside:avoid; break-inside:avoid;}
+}
+</style>
+
+<div class="container" id="resume-container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>DERICK BESSA</h1>
+        <div class="title">Desenvolvedor Fullstack (Python | JavaScript | React)</div>
+        <div class="contact">
+            <a href="mailto:derickbessa12@gmail.com">Email: derickbessa12@gmail.com</a> |
+            <a href="https://github.com/DerickBessa" target="_blank">Github</a> |
+            <a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfólio</a> |
+            <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
+        </div>
+    </div>
+
+    <!-- Resumo -->
+    <div class="section">
+        <div class="section-title">Resumo Profissional</div>
+        <div class="summary">
+            <p>
+                Estudante do 5º período de Ciência da Computação com experiência prática no desenvolvimento de aplicações web utilizando Python, JavaScript e Docker. Atuo na construção de funcionalidades frontend e backend, implementação de APIs REST e modularização de código, seguindo boas práticas orientadas por equipes técnicas. Possuo experiência com testes unitários, integração contínua e participação em metodologias ágeis. Busco evoluir tecnicamente, adquirir maior autonomia e contribuir com produtos digitais no segmento educacional.
+            </p>
+        </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section">
+        <div class="section-title">Habilidades Técnicas</div>
+
+        <div class="skill-category">
+            <strong>Backend:</strong>
+            Python, Java, APIs REST, Django (estudando), Autenticação JWT
+        </div>
+
+        <div class="skill-category">
+            <strong>Frontend:</strong>
+            JavaScript, TypeScript, React, Next.js (em evolução), Angular, HTML, CSS
+        </div>
+
+        <div class="skill-category">
+            <strong>Banco de Dados:</strong>
+            PostgreSQL, MySQL, SQLite
+        </div>
+
+        <div class="skill-category">
+            <strong>Testes:</strong>
+            React Testing Library, Testes Unitários, Postman
+        </div>
+
+        <div class="skill-category">
+            <strong>DevOps & Cloud:</strong>
+            Docker, Git, GitHub Actions, CI/CD, AWS (conceitos básicos)
+        </div>
+
+        <div class="skill-category">
+            <strong>IAs Generativas:</strong>
+            Integração com LLMs, criação de endpoints para automação, uso de embeddings
+        </div>
+    </div>
+
+    <!-- Experiência -->
+    <div class="section">
+        <div class="section-title">Experiência Profissional</div>
+
+        <!-- LABVICIA -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LABVICIA – IFCE</div>
+                <div class="job-date">2025 – Atual</div>
+            </div>
+            <div class="job-position">Desenvolvedor Fullstack</div>
+            <ul>
+                <li>Desenvolvimento de funcionalidades frontend (Angular/TypeScript) e backend (Java/Spring Boot) seguindo roadmap definido.</li>
+                <li>Implementação e manutenção de APIs REST com boas práticas orientadas pela equipe.</li>
+                <li>Modularização de componentes e refatoração de código para melhoria de organização e legibilidade.</li>
+                <li>Correção de bugs e apoio na fase de QA com testes de desenvolvimento.</li>
+                <li>Participação em processos ágeis (Scrum), colaborando com equipe técnica e áreas de suporte.</li>
+            </ul>
+        </div>
+
+        <!-- LAPISCO -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LAPISCO – IFCE</div>
+                <div class="job-date">2024 – Atual</div>
+            </div>
+            <div class="job-position">Desenvolvedor Python & Pesquisa em Visão Computacional</div>
+            <ul>
+                <li>Desenvolvimento de módulos em Python para processamento de dados e visão computacional utilizando OpenCV.</li>
+                <li>Estruturação de pipelines organizados para testes e validação de modelos.</li>
+                <li>Integração de backend Python com aplicações frontend.</li>
+                <li>Documentação técnica e organização de código para facilitar manutenção e colaboração.</li>
+            </ul>
+        </div>
+
+        <!-- TáNaLista -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">TáNaLista – SaaS</div>
+                <div class="job-date">2026 – Atual</div>
+            </div>
+            <div class="job-position">Desenvolvedor Fullstack</div>
+            <ul>
+                <li>Desenvolvimento de funcionalidades web com React e backend em Python/Java.</li>
+                <li>Implementação de APIs REST e integração com banco de dados relacional.</li>
+                <li>Containerização da aplicação utilizando Docker.</li>
+                <li>Integração de chatbot com LLM para automação de atendimento.</li>
+                <li>Configuração básica de CI/CD para padronização de deploy.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- Formação -->
+    <div class="section">
+        <div class="section-title">Formação</div>
+        <div class="education-item">
+            <strong>Bacharelado em Ciência da Computação</strong> – IFCE (5º período)  
+            2024 – 2028
+        </div>
+    </div>
+
+    <!-- Idiomas -->
+    <div class="section">
+        <div class="section-title">Idiomas</div>
+        <div class="education-item">
+            Inglês (Avançado) | Português (Nativo)
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
