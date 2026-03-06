@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Derick - Full-Stack & AI Engineer</title>
-   <style>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -20,13 +20,12 @@
         }
 
         .container {
-            max-width: 210mm;
-            margin: 0 auto;
-            background: #fff;
-            padding: 0.55in;
-            min-height: 297mm;
-            position: relative;
-        }
+		max-width: 210mm;
+		margin: 0 auto;
+		background: #fff;
+		padding: 0.55in;
+		position: relative;
+		}
 
         @media print {
             body {
@@ -75,7 +74,7 @@
 
         /* Section Headers */
         .section {
-            margin-bottom: 8px;
+            margin-bottom: 5px;
         }
 
         .section-title {
@@ -109,7 +108,7 @@
 
         /* Experience */
         .job {
-            margin-bottom: 10px;
+            margin-bottom: 6px;
         }
 
         .job-header {
@@ -251,33 +250,47 @@
         }
         @media print {
 
-        @page {
-            size: A4;
-            margin: 0;
-        }
+		@page {
+			size: A4;
+			margin: 12mm;
+		}
 
-        body {
-            margin: 0;
-        }
+		html, body {
+			width: 210mm;
+			height: auto;
+			margin: 0;
+			padding: 0;
+			background: white;
+		}
 
-        .container {
-            margin: 0;
-            padding: 0.5in;
-        }
+		.container {
+			max-width: 100%;
+			padding: 0;
+			margin: 0;
+		}
 
-        /* Impede quebra de página automática */
-        .section,
-        .job,
-        .education-item {
-            page-break-inside: avoid;
-            break-inside: avoid;
-        }
+		.download-btn-en {
+			display: none;
+		}
 
-        /* Remove qualquer quebra extra */
-        html, body {
-            height: auto;
-        }
+		.section,
+		.job,
+		.education-item {
+			break-inside: avoid;
+			page-break-inside: avoid;
+		}
+
+		}
+
+	@media print {
+    html, body {
+        height: auto;
     }
+
+    .container {
+        overflow: hidden;
+    }
+}
     </style>
 </head>
 <body>
@@ -289,113 +302,155 @@
 
     <div class="container" id="resume-container">
         <!-- Header -->
-        <div class="header">
-            <h1>DERICK BESSA</h1>
-            <div class="title">Full-Stack Developer & AI Engineer</div>
-            <div class="contact">
-                <a href="mailto:derickbessa12@gmail.com">Email: derickbessa12@gmail.com</a> |
-                <a href="https://github.com/DerickBessa" target="_blank">Github: github.com/DerickBessa</a> |
-                <a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfolio: derickbessa-portfolio-2026.vercel.app</a>
-                <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
-            </div>
-        </div>
+        <!-- Header -->
+<div class="header">
+	<h1>DERICK BESSA</h1>
+	<div class="title">Full-Stack Developer & AI Integration</div>
+	<div class="contact">
+		<a href="mailto:derickbessa12@gmail.com">Email: derickbessa12@gmail.com</a> |
+		<a href="https://github.com/DerickBessa" target="_blank">Github: github.com/DerickBessa</a> |
+		<a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfolio</a> |
+		<a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
+	</div>
+</div>
 
-        <!-- Professional Summary -->
-        <div class="section">
-            <div class="section-title">Professional Summary</div>
-            <div class="summary">
-                <p>Full-Stack Developer & AI Engineer specialized in building scalable systems and production-ready Computer Vision applications. Experienced in leading API architecture (Java/Spring Boot) and developing modern interfaces (Angular/React), integrating Deep Learning models into complete pipelines. Proven track record in performance optimization, improving application speed and reducing redundant database calls.</p>
-            </div>
-        </div>
+<!-- Professional Summary -->
+<div class="section">
+<div class="section-title">Professional Summary</div>
+<div class="summary">
+<p>
+Full-Stack Developer specialized in building scalable web applications and robust APIs using React, Next.js, Node.js, and PostgreSQL. Hands-on experience developing complete systems, from modern user interfaces to high-performance backend architectures.
 
-        <!-- Technical Skills -->
-        <div class="section" style="margin-top: 18px;">
-            <div class="section-title">Technical Skills</div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <strong>Artificial Intelligence & Computer Vision:</strong> YOLO, PyTorch, MediaPipe, OCR, Embeddings Generation, Data Augmentation, CNN Models
-                </div>
-                <div class="skill-category">
-                    <strong>Frontend:</strong> TypeScript, JavaScript, Angular, React, HTML, SCSS, Tailwind CSS
-                </div>
-                <div class="skill-category">
-                    <strong>Backend:</strong> Java, Spring Boot, REST APIs, GraphQL, JWT/OAuth2 Authentication
-                </div>
-                <div class="skill-category">
-                    <strong>Databases:</strong> PostgreSQL, SQLite
-                </div>
-                <div class="skill-category">
-                    <strong>DevOps & CI/CD:</strong> Docker, GitHub Actions, Vercel, Automated Deployment
-                </div>
-                <div class="skill-category">
-                    <strong>Testing & Methodologies:</strong> React Testing Library, Postman, TDD, Agile Methodologies (Trello, Jira)
-                </div>
-            </div>
-        </div>
+Experienced in integrating Artificial Intelligence and Computer Vision solutions into web applications, connecting Python-based models to production pipelines and APIs. Proven track record in performance optimization and architecture improvements, achieving up to 60% faster application load times and reducing database requests by 40%.
+</p>
+</div>
+</div>
 
-        <!-- Professional Experience -->
-        <div class="section">
-            <div class="section-title">Professional Experience</div>
+<!-- Skills -->
+<div class="section">
+<div class="section-title">Technical Skills</div>
 
-            <!-- LABVICIA -->
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title-company">LABVICIA – IFCE | Campus Fortaleza</div>
-                    <div class="job-date">Sep 2025 – Present</div>
-                </div>
-                <div class="job-position">Full-Stack Developer & AI Engineer</div>
-                <ul>
-                    <li>Led the platform internationalization in <strong>4 languages</strong>, significantly increasing global reach and active user engagement.</li>
-                    <li>Implemented UI/UX and performance improvements with TypeScript, Angular, and Java/Spring Boot, including component modularization, styled pagination, and PostgreSQL query optimization.</li>
-                    <li>Applied Agile methodologies, detailed technical reports, and continuous feedback loops to ensure <strong>clean code</strong>, layered architecture, and long-term scalability.</li>
-                    <li>Optimized internal processes through automation and architectural adjustments, boosting operational efficiency and improving user retention.</li>
-                    <li>Contributed to monitoring and tuning REST APIs, implementing detailed logs and performance metrics to enhance system reliability.</li>
-                </ul>
-            </div>
+<div class="skills-grid">
 
-            <!-- LAPISCO -->
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title-company">LAPISCO – IFCE | Campus Fortaleza</div>
-                    <div class="job-date">Jun 2024 – Present</div>
-                </div>
-                <div class="job-position">AI & Computer Vision Researcher</div>
-                <ul>
-                    <li>Developed <strong>CNN models with YOLO and MediaPipe</strong> for object, edge, and hand detection, applying preprocessing, Data Augmentation, and Early Stopping.</li>
-                    <li>Led research on <strong>automatic LIBRAS translation</strong>, combining CNNs, VLMs, and LLMs, tested in multiple real-world scenarios for digital inclusion.</li>
-                    <li>Designed and implemented frontend with <strong>Dart/Flutter</strong>, integrating object detection and robust datasets for real-time reliability.</li>
-                    <li>Organized pipelines for documentation and technical workflow, applying Machine Learning, Deep Learning, and Image Processing best practices.</li>
-                    <li>Optimized inference and model deployment, reducing processing time and memory usage for efficient production performance.</li>
-                </ul>
-            </div>
+<div class="skill-category">
+<strong>Frontend:</strong>
+React, Next.js, TypeScript, JavaScript, Angular, HTML, SCSS, Tailwind CSS
+</div>
 
-            <!-- TáNaLista -->
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title-company">TáNaLista – Founded & Led Project</div>
-                    <div class="job-date">Jan 2026 – Present</div>
-                </div>
-                <div class="job-position">Founder & Lead Engineer</div>
-                <ul>
-                    <li>Conceived and led a <strong>SaaS event management platform</strong>, integrating QR code check-ins, facial and fingerprint detection to minimize fraud.</li>
-                    <li>Structured robust full-stack architecture with relational backend and web/mobile frontend, implementing differentiated permissions for scalability and full event customization.</li>
-                    <li>Developed advanced <strong>Computer Vision features with YOLO and MediaPipe</strong>, ensuring <strong>high accuracy</strong> in face, hand, and fingerprint detection.</li>
-                    <li>Created an intelligent AI chatbot to automate user support, notifications, and guest management, reducing manual intervention.</li>
-                    <li>Implemented complete event management pipelines, including automatic notifications, guest lists, gift tracking, and CI/CD for maintenance and scalability.</li>
-                </ul>
-            </div>
-        </div>
+<div class="skill-category">
+<strong>Backend:</strong>
+Node.js, REST APIs, GraphQL, Java, Spring Boot, JWT/OAuth2 Authentication, Python
+</div>
 
-        <!-- Education & Languages -->
-        <div class="section">
-            <div class="section-title">Education & Languages</div>
-            <div class="education-item">
-                <strong>Bachelor's in Computer Science</strong> | IFCE - Campus Fortaleza | 2024 – 2028
-            </div>
-            <div class="education-item" style="margin-top: 2px;">
-                <strong>Languages:</strong> English (Advanced), Portuguese (Native)
-            </div>
-        </div>
-    </div>
+<div class="skill-category">
+<strong>Databases:</strong>
+PostgreSQL, SQLite
+</div>
+
+<div class="skill-category">
+<strong>Programming & AI:</strong>
+OpenCV, YOLO, PyTorch, MediaPipe, OCR, CNNs, Data Augmentation, LLMs
+</div>
+
+<div class="skill-category">
+<strong>DevOps & Continuous Delivery:</strong>
+Docker, GitHub Actions, Vercel, CI/CD, Automated Deployments
+</div>
+
+<div class="skill-category">
+<strong>Testing & Methodologies:</strong>
+React Testing Library, Postman, TDD, Agile Methodologies (Trello, Jira)
+</div>
+
+</div>
+</div>
+
+<!-- Professional Experience -->
+<div class="section">
+<div class="section-title">Professional Experience</div>
+
+<!-- LABVICIA -->
+<div class="job">
+<div class="job-header">
+<div class="job-title-company">LABVICIA – IFCE | Fortaleza Campus</div>
+<div class="job-date">Sep 2025 – Present</div>
+</div>
+
+<div class="job-position">Full-Stack Developer</div>
+
+<ul>
+
+<li>Developed interfaces and features using <strong>React, Angular, and TypeScript</strong>, integrated with backend APIs in <strong>Node.js and Java/Spring Boot</strong>, improving user experience and platform scalability.</li>
+
+<li>Implemented <strong>UI/UX and performance improvements</strong>, including component modularization and PostgreSQL query optimization, reducing application load time by <strong>60%</strong> and decreasing database requests by <strong>40%</strong>.</li>
+
+<li>Led platform internationalization into <strong>4 languages</strong>, expanding global reach and contributing to a <strong>+120% increase in active user engagement</strong>.</li>
+
+<li>Implemented API monitoring and structured logging for performance analysis, improving application reliability and reducing production failures.</li>
+
+<li>Contributed to scalable architecture and development processes using clean code practices and agile methodologies, increasing team operational efficiency by approximately <strong>85%</strong>.</li>
+
+</ul>
+</div>
+
+<!-- LAPISCO -->
+<div class="job">
+<div class="job-header">
+<div class="job-title-company">LAPISCO – IFCE | Fortaleza Campus</div>
+<div class="job-date">Jun 2024 – Present</div>
+</div>
+
+<div class="job-position">Backend Developer & AI Researcher</div>
+
+<ul>
+
+<li>Developed <strong>computer vision APIs using Python and FastAPI</strong>, exposing detection models based on YOLO and MediaPipe for integration with web and mobile applications.</li>
+
+<li>Implemented backend pipelines responsible for <strong>image processing, model inference, and structured result delivery</strong>, enabling external systems to consume analysis through REST APIs.</li>
+
+<li>Designed integration with <strong>databases and dataset storage</strong>, creating Python routines for automatic image retrieval, processing, and result updates.</li>
+
+<li>Optimized image preprocessing and <strong>data augmentation techniques</strong>, achieving up to <strong>85% accuracy</strong> and <strong>90–97% precision</strong> in experimental scenarios.</li>
+
+<li>Structured experimentation pipelines and technical documentation, facilitating model maintenance and collaboration between researchers and developers.</li>
+
+</ul>
+</div>
+
+<!-- Freelance & SaaS -->
+<div class="job">
+<div class="job-header">
+<div class="job-title-company">Freelance & Independent Projects</div>
+<div class="job-date">2025 – Present</div>
+</div>
+
+<div class="job-position">Full-Stack Developer</div>
+
+<ul>
+
+<li>Developed <strong>3 landing pages for law firms</strong> using <strong>React, Next.js, and Node.js</strong>, building responsive interfaces and APIs for lead capture and management.</li>
+
+<li>Designed <strong>full-stack architecture with React, Next.js, Node.js, and PostgreSQL</strong>, implementing REST APIs, authentication, and scalable frontend-backend integrations.</li>
+
+<li>Implemented <strong>CI/CD and automated deployment with Vercel</strong>, optimizing builds and reducing deployment time by <strong>50%</strong>.</li>
+
+<li><strong>Founder of TáNaLista SaaS</strong>, an event management platform featuring <strong>QR Code check-in</strong> and backend automations built with <strong>Node.js and Python</strong>, including integrations with external APIs and experimental Computer Vision modules.</li>
+
+</ul>
+</div>
+
+<!-- Education -->
+<div class="section">
+<div class="section-title">Education & Languages</div>
+
+<div class="education-item">
+<strong>Bachelor’s Degree in Computer Science</strong> | IFCE - Fortaleza Campus | 2024 - 2028
+</div>
+
+<div class="education-item" style="margin-top:2px;">
+<strong>Languages:</strong> English (Advanced), Portuguese (Native)
+</div>
+
+</div>
 </body>
 </html>
