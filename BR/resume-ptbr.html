@@ -1,54 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derick Bessa</title>
+    <title>Derick Bessa – Currículo</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.20;
+            line-height: 1.05;
             color: #000;
             background: #f5f5f5;
-            font-size: 10.2pt;
+            font-size: 9.7pt;
         }
 
         .container {
-		max-width: 210mm;
-		margin: 0 auto;
-		background: #fff;
-		padding: 0.55in;
-		position: relative;
-		}
-
-        @media print {
-            body {
-                background: #fff;
-            }
-            .container {
-                padding: 0.45in;
-                margin: 0;
-            }
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #fff;
+            padding: 0.5in;
+            position: relative;
         }
 
-        /* Header */
+        @media print {
+            body { background: #fff; }
+            .container {
+                padding: 0.5in;
+                margin: 0;
+                max-width: 100%;
+            }
+            .no-print { display: none; }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            html, body {
+                width: 210mm;
+                height: auto;
+            }
+            .job-header { break-after: avoid; page-break-after: avoid; }
+            .job-position { break-after: avoid; page-break-after: avoid; }
+            .education-item { break-inside: avoid; page-break-inside: avoid; }
+            .section-title { break-after: avoid; page-break-after: avoid; }
+            .skills-grid { break-inside: avoid; page-break-inside: avoid; }
+            .summary { break-inside: avoid; page-break-inside: avoid; }
+        }
+
         .header {
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 8px;
             border-bottom: 1px solid #000;
-            padding-bottom: 8px;
+            padding-bottom: 4.5px;
         }
 
         .header h1 {
             font-size: 20pt;
             font-weight: bold;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
             letter-spacing: 1px;
         }
 
@@ -58,27 +67,14 @@
             font-weight: normal;
         }
 
-        .contact {
-            font-size: 9.5pt;
-            line-height: 1.4;
-        }
+        .contact { font-size: 9.5pt; line-height: 1.4; }
+        .contact a { color: #000; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
 
-        .contact a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section Headers */
-        .section {
-            margin-bottom: 5px;
-        }
+        .section { margin-bottom: 4px; }
 
         .section-title {
-            font-size: 11pt;
+            font-size: 10.5pt;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -87,97 +83,29 @@
             padding-bottom: 2px;
         }
 
-        /* Summary */
-        .summary {
-            text-align: justify;
-            line-height: 1.4;
-        }
+        .summary { text-align: justify; line-height: 1.00; }
 
-        /* Skills */
-        .skills-grid {
-            line-height: 1.4;
-        }
+        .skills-grid { line-height: 1.35; }
+        .skill-category { margin-bottom: 2px; }
+        .skill-category strong { font-weight: bold; }
 
-        .skill-category {
-            margin-bottom: 4px;
-        }
-
-        .skill-category strong {
-            font-weight: bold;
-        }
-
-        /* Experience */
-        .job {
-            margin-bottom: 6px;
-        }
+        .job { margin-bottom: 6px; }
 
         .job-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 2px;
+            margin-bottom: 1px;
         }
 
-        .job-title-company {
-            font-weight: bold;
-            font-size: 10.5pt;
-        }
+        .job-title-company { font-weight: bold; font-size: 10.5pt; }
+        .job-date { font-style: italic; font-size: 9.5pt; color: #333; }
+        .job-position { font-style: italic; margin-bottom: 4px; font-size: 9.7pt; }
 
-        .job-date {
-            font-style: italic;
-            font-size: 9.5pt;
-            color: #333;
-        }
+        .job ul { margin-left: 16px; margin-top: 2px; }
+        .job li { margin-bottom: 2px; line-height: 1.32; }
 
-        .job-position {
-            font-style: italic;
-            margin-bottom: 4px;
-            font-size: 10pt;
-        }
-
-        .job ul {
-            margin-left: 18px;
-            margin-top: 3px;
-        }
-
-        .job li {
-            margin-bottom: 2px;
-            line-height: 1.35;
-        }
-
-        /* Projects */
-        .project {
-            margin-bottom: 8px;
-        }
-
-        .project-header {
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-
-        .project-header a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .project-description {
-            line-height: 1.4;
-        }
-
-        .project ul {
-            margin-left: 18px;
-            margin-top: 3px;
-        }
-
-        .project li {
-            margin-bottom: 3px;
-            line-height: 1.35;
-        }
-
-        /* Education */
-        .education-item {
-            margin-bottom: 6px;
-        }
+        .education-item { margin-bottom: 5px; }
 
         .education-header {
             display: flex;
@@ -185,273 +113,134 @@
             align-items: baseline;
         }
 
-        .education-school {
-            font-weight: bold;
+        .education-school { font-weight: bold; }
+        .education-date { font-style: italic; font-size: 9.5pt; color: #333; }
+
+        .download-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
         }
 
-        .education-date {
-            font-style: italic;
-            font-size: 9.5pt;
-            color: #333;
-        }
-
-        .education-degree {
-            font-size: 10pt;
-        }
-
-        /* Metrics highlighting */
-        strong.metric {
-            font-weight: bold;
-        }
-        .download-btn-en {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        z-index: 1000; /* garante que fique acima de outros elementos */
-        }
-
-        .download-btn-en a {
-            padding: 15px 25px;
-            background: #0b511d;
+        .download-btn a {
+            padding: 10px 20px;
+            background: #111;
             color: #fff;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.9rem;
             display: inline-block;
             transition: 0.2s;
         }
 
-        .download-btn-en a:hover {
-            background: #093b14;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .download-btn-en {
-                top: 15px;
-                right: 15px;
-            }
-            .download-btn-en a {
-                padding: 10px 18px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .download-btn-en {
-                top: 10px;
-                right: 10px;
-            }
-            .download-btn-en a {
-                padding: 8px 14px;
-                font-size: 0.8rem;
-            }
-        }
-        @media print {
-
-		@page {
-			size: A4;
-			margin: 12mm;
-		}
-
-		html, body {
-			width: 210mm;
-			height: auto;
-			margin: 0;
-			padding: 0;
-			background: white;
-		}
-
-		.container {
-			max-width: 100%;
-			padding: 0;
-			margin: 0;
-		}
-
-		.download-btn-en {
-			display: none;
-		}
-
-		.section,
-		.job,
-		.education-item {
-			break-inside: avoid;
-			page-break-inside: avoid;
-		}
-
-		}
-
-	@media print {
-    html, body {
-        height: auto;
-    }
-
-    .container {
-        overflow: hidden;
-    }
-}
+        .download-btn a:hover { background: #333; }
     </style>
 </head>
 <body>
-    <div class="download-btn-en">
-        <a href="resume-ptbr.pdf" download>
-            Download PDF (PT-BR)
-        </a>
+
+<div class="download-btn no-print">
+    <a href="javascript:window.print()">Imprimir / Salvar PDF</a>
+</div>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>DERICK BESSA</h1>
+        <div class="title">Engenheiro de Software Full Stack | IA & Visão Computacional</div>
+        <div class="contact">
+            <a href="mailto:derickbessa12@gmail.com">derickbessa12@gmail.com</a> |
+            <a href="https://github.com/DerickBessa" target="_blank">github.com/DerickBessa</a> |
+            <a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfólio</a> |
+            <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
+        </div>
     </div>
-    <div class="container" id="resume-container">
-        <!-- Header -->
-        <!-- Header -->
-	<div class="header">
-		<h1>DERICK BESSA</h1>
-		<div class="title">Full-Stack Developer & AI Integration</div>
-		<div class="contact">
-			<a href="mailto:derickbessa12@gmail.com">Email: derickbessa12@gmail.com</a> |
-			<a href="https://github.com/DerickBessa" target="_blank">Github: github.com/DerickBessa</a> |
-			<a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfólio</a> |
-			<a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
-		</div>
-	</div>
 
-	<!-- Professional Summary -->
-	<div class="section">
-	<div class="section-title">Resumo Profissional</div>
-	<div class="summary">
-	<p>
-	Full-Stack Developer especializado na construção de aplicações web escaláveis e APIs robustas utilizando React, Next.js, Node.js e PostgreSQL. Experiência prática desenvolvendo sistemas completos, desde interfaces modernas até arquiteturas backend de alta performance.
+    <!-- RESUMO PROFISSIONAL -->
+    <div class="section">
+        <div class="section-title">Resumo Profissional</div>
+        <div class="summary">
+            Engenheiro de Software Full Stack com aproximadamente 2 anos de experiência construindo sistemas web de produção que combinam engenharia sólida com Inteligência Artificial aplicada. Curso Ciência da Computação no IFCE enquanto atuo em projetos de alto impacto. Histórico comprovado de otimização de performance e arquitetura de sistemas escaláveis — com melhorias documentadas de 60% no tempo de carregamento, 40% de redução em chamadas ao banco de dados e 97% de precisão em sistemas de visão computacional em ambiente real.
+        </div>
+    </div>
 
-	Possui experiência integrando soluções de Inteligência Artificial e Visão Computacional a aplicações web, conectando modelos desenvolvidos em Python a pipelines de produção e APIs. Histórico comprovado de otimização de performance e arquitetura, com melhorias de até 60% no tempo de carregamento de aplicações e redução de 40% em requisições ao banco de dados.
-	</p>
-	</div>
-	</div>
+    <!-- HABILIDADES TÉCNICAS -->
+    <div class="section">
+        <div class="section-title">Habilidades Técnicas</div>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, TypeScript, JavaScript, Tailwind CSS, SCSS, HTML, Angular Material, ngx-translate</div>
+            <div class="skill-category"><strong>Backend:</strong> Node.js, Java, Spring Boot, Python, FastAPI, APIs REST, JWT/OAuth2, Spring Security</div>
+            <div class="skill-category"><strong>Bancos de Dados:</strong> PostgreSQL, SQLite, MySQL</div>
+            <div class="skill-category"><strong>IA & Visão Computacional:</strong> Integração de LLMs via API, YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR, PyTorch</div>
+            <div class="skill-category"><strong>DevOps & Ferramentas:</strong> Docker, Git, GitHub Actions, Vercel, CI/CD, AWS, Swagger/OpenAPI</div>
+            <div class="skill-category"><strong>Metodologias:</strong> Agile, Scrum, Código Limpo, Arquitetura em Camadas, MVVM</div>
+        </div>
+    </div>
 
-	<!-- Skills -->
-	<div class="section">
-	<div class="section-title">Habilidades Técnicas</div>
+    <!-- EXPERIÊNCIA PROFISSIONAL -->
+    <div class="section">
+        <div class="section-title">Experiência Profissional</div>
 
-	<div class="skills-grid">
+        <!-- LABVICIA -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LabVicia – IFCE | Campus Fortaleza</div>
+                <div class="job-date">Set 2025 – Atual</div>
+            </div>
+            <div class="job-position">Desenvolvedor Full Stack</div>
+            <ul>
+                <li>Otimizei a performance do frontend introduzindo paginação server-side, modularização de componentes e eliminação de chamadas redundantes à API — reduzindo em <strong>40%</strong> as requisições ao banco e aumentando em <strong>60%</strong> a velocidade de carregamento das páginas, medido via DevTools e monitoramento em produção.</li>
+                <li>Refatorei o módulo de inbox/mensagens em componentes isolados (composição, listagem e leitura) com carregamento paginado, polling em tempo real com deduplicação e histórico sensível ao scroll — reduzindo em <strong>85%</strong> o tempo de carregamento da tela.</li>
+                <li>Redesenhei <strong>10+ interfaces</strong> padronizando UX com feedback de erros, navegação por etapas e estados visuais com Angular Material (mat-stepper, mat-raised-button) — reduzindo <strong>45%</strong> dos tickets de suporte dos usuários.</li>
+                <li>Arquitetei a internacionalização completa da plataforma para <strong>4 idiomas (PT, EN, ES, DE)</strong> com ngx-translate e arquivos JSON por idioma, habilitando troca dinâmica sem recarregamento e aumentando a produtividade de membros internacionais da equipe.</li>
+            </ul>
+        </div>
 
-	<div class="skill-category">
-	<strong>Frontend:</strong>
-	React, Next.js, TypeScript, JavaScript, Angular, HTML, SCSS, Tailwind CSS
-	</div>
+        <!-- LAPISCO -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LAPISCO – Laboratório de Pesquisa do IFCE | Campus Fortaleza</div>
+                <div class="job-date">Jun 2024 – Atual</div>
+            </div>
+            <div class="job-position">Desenvolvedor Full Stack · Meio Período</div>
+            <ul>
+                <li>Desenvolvi do zero um microserviço <strong>Python/FastAPI</strong> de processamento de imagens para o SFA (Sistema de Fiscalização Automotiva), expondo os resultados via <strong>API REST</strong> consumida pelo backend <strong>Java/Spring Boot</strong> — atingindo <strong>97% de precisão</strong> com modelos de IA utilizados como ferramenta de processamento.</li>
+                <li>Contribuí ativamente no backend Spring Boot implementando <strong>endpoints REST, operações CRUD, autenticação JWT com refresh tokens e controle de acesso por roles</strong> via Spring Security, com sessões stateless, tratamento centralizado de exceções e geração de relatórios em PDF.</li>
+                <li>Estruturei a integração com <strong>PostgreSQL</strong> para persistência e consulta dos dados do sistema, documentei todas as APIs com <strong>Swagger/OpenAPI</strong> e desenvolvi um segundo microserviço de reconhecimento de <strong>Libras</strong> integrado a uma <strong>API de LLM</strong> para tradução em linguagem natural.</li>
+            </ul>
+        </div>
 
-	<div class="skill-category">
-	<strong>Backend:</strong>
-	Node.js, APIs REST, GraphQL, Java, Spring Boot, Autenticação JWT/OAuth2, Python
-	</div>
+        <!-- FREELANCE -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">Gomes & Araújo Advocacia – Freelancer</div>
+                <div class="job-date">2025</div>
+            </div>
+            <div class="job-position">Desenvolvedor Front-End</div>
+            <ul>
+                <li>Projetei e desenvolvi do zero uma landing page completa com <strong>React, Vite e Tailwind CSS puro</strong> — estruturada em 8 seções modulares (Hero, Áreas de Atuação, Sobre, Equipe, FAQ, Contato e Footer) com layout totalmente responsivo para mobile, tablet e desktop sem bibliotecas externas de UI.</li>
+                <li>Implementei backend <strong>Node.js/Express</strong> com envio de emails transacionais via <strong>Resend API</strong>, roteando mensagens do formulário diretamente para o escritório com formatação HTML estruturada, e realizei deploy na Vercel com domínio brasileiro configurado.</li>
+                <li>O projeto gerou um aumento de <strong>30% nos contatos de clientes</strong> para o escritório, consolidando a presença digital da empresa — e resultou diretamente na minha contratação CLT como desenvolvedor.</li>
+            </ul>
+        </div>
+    </div>
 
-	<div class="skill-category">
-	<strong>Bancos de Dados:</strong>
-	PostgreSQL, SQLite
-	</div>
+    <!-- FORMAÇÃO & IDIOMAS -->
+    <div class="section">
+        <div class="section-title">Formação & Idiomas</div>
+        <div class="education-item">
+            <div class="education-header">
+                <span class="education-school">Bacharelado em Ciência da Computação – IFCE, Campus Fortaleza</span>
+                <span class="education-date">2024 – 2028</span>
+            </div>
+        </div>
+        <div class="education-item" style="margin-top: 4px;">
+            <strong>Idiomas:</strong> Inglês (Avançado) · Português (Nativo)
+        </div>
+    </div>
 
-	<div class="skill-category">
-	<strong>Programação & IA:</strong>
-	 OpenCV, YOLO, PyTorch, MediaPipe, OCR, CNNs, Data Augmentation, LLMs
-	</div>
-
-	<div class="skill-category">
-	<strong>DevOps & Entrega Contínua:</strong>
-	Docker, GitHub Actions, Vercel, CI/CD, Deploy Automatizado
-	</div>
-
-	<div class="skill-category">
-	<strong>Testes & Metodologias:</strong>
-	React Testing Library, Postman, TDD, Metodologias Ágeis (Trello, Jira)
-	</div>
-
-	</div>
-	</div>
-
-	<!-- Professional Experience -->
-
-	<div class="section">
-	<div class="section-title">Experiência Profissional</div>
-
-	<!-- LABVICIA -->
-	<div class="job">
-	<div class="job-header">
-	<div class="job-title-company">LABVICIA – IFCE | Campus Fortaleza</div>
-	<div class="job-date">Set 2025 – Atual</div>
-	</div>
-
-	<div class="job-position">Full-Stack Developer</div>
-
-	<ul>
-
-	<li>Fui responsável pelo desenvolvimento de interfaces e funcionalidades utilizando <strong>React, Angular e TypeScript</strong>, integradas a APIs backend em <strong>Node.js e Java/Spring Boot</strong>, melhorando a experiência de usuário e escalabilidade da plataforma.</li>
-
-	<li>Implementei melhorias de <strong>UI/UX e performance</strong>, incluindo modularização de componentes e otimização de queries PostgreSQL, reduzindo o tempo de carregamento da aplicação em <strong>60%</strong> e diminuindo requisições ao banco em <strong>40%</strong>.</li>
-
-	<li>Conduzi a internacionalização da plataforma para <strong>4 idiomas</strong>, aumentando o alcance global e contribuindo para crescimento de <strong>+120% no engajamento de usuários ativos</strong>.</li>
-
-	<li>Implementei monitoramento de APIs e logs estruturados para análise de performance, aumentando confiabilidade da aplicação e reduzindo falhas em produção.</li>
-
-	<li>Contribuí para arquitetura escalável e processos de desenvolvimento com práticas de código limpo e metodologias ágeis, aumentando eficiência operacional da equipe em aproximadamente <strong>85%</strong>.</li>
-
-	</ul>
-	</div>
-
-	<!-- LAPISCO -->
-	<div class="job">
-	<div class="job-header">
-	<div class="job-title-company">LAPISCO – IFCE | Campus Fortaleza</div>
-	<div class="job-date">Jun 2024 – Atual</div>
-	</div>
-
-	<div class="job-position">Backend Developer & AI Researcher</div>
-
-	<ul>
-
-	<li>Desenvolvi <strong>APIs de visão computacional utilizando Python e FastAPI</strong>, expondo modelos de detecção baseados em YOLO e MediaPipe para integração com aplicações web e mobile.</li>
-
-	<li>Implementei pipelines backend responsáveis por <strong>processamento de imagens, inferência de modelos e retorno estruturado de resultados</strong>, permitindo consumo das análises por sistemas externos via REST APIs.</li>
-
-	<li>Projetei integração direta com <strong>bancos de dados e armazenamento de datasets</strong>, criando rotinas em Python para recuperação automática de imagens, processamento e atualização de resultados.</li>
-
-	<li>Otimizei pré-processamento de imagens e técnicas de <strong>Data Augmentation</strong>, atingindo até <strong>85% de acurácia</strong> e <strong>90–97% de precisão</strong> em cenários experimentais.</li>
-
-	<li>Estruturei pipelines de experimentação e documentação técnica, facilitando manutenção de modelos e colaboração entre pesquisadores e desenvolvedores.</li>
-
-	</ul>
-	</div>
-
-
-	<!-- Freelance & SaaS -->
-	<div class="job">
-	<div class="job-header">
-	<div class="job-title-company">Freelance & Independent Projects</div>
-	<div class="job-date">2025 – Atual</div>
-	</div>
-
-	<div class="job-position">Full-Stack Developer</div>
-
-	<ul>
-
-	<li>Desenvolvi <strong>3 landing pages para escritórios de advocacia</strong> utilizando <strong>React, Next.js e Node.js</strong>, criando interfaces responsivas e APIs para captura e gestão de leads.</li>
-
-	<li>Projetei arquitetura <strong>full-stack com React, Next.js, Node.js e PostgreSQL</strong>, implementando APIs REST, autenticação e integração entre frontend e backend para aplicações escaláveis.</li>
-
-	<li>Implementei <strong>CI/CD e deploy automatizado com Vercel</strong>, otimizando builds e reduzindo o tempo de deploy em <strong>50%</strong>.</li>
-
-	<li><strong>Founder do SaaS TáNaLista</strong>, plataforma de gestão de eventos com <strong>check-in via QR Code</strong> e automações backend em <strong>Node.js e Python</strong>, incluindo integrações com APIs externas e módulos experimentais de Computer Vision.</li>
-
-	</ul>
-	</div>
-
-	<!-- Education -->
-	<div class="section">
-	<div class="section-title">Formação & Idiomas</div>
-
-	<div class="education-item">
-	<strong>Bacharelado em Ciência da Computação</strong> | IFCE - Campus Fortaleza | 2024 - 2028
-	</div>
-
-	<div class="education-item" style="margin-top:2px;">
-	<strong>Idiomas:</strong> Inglês (Avançado), Português (Nativo)
-	</div>
-
-	</div>
+</div>
 </body>
 </html>

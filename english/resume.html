@@ -3,46 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derick - Full-Stack & AI Engineer</title>
-<style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <title>Derick Bessa – Resume</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.20;
+            line-height: 1.15;
             color: #000;
             background: #f5f5f5;
-            font-size: 10.2pt;
+            font-size: 9.7pt;
         }
 
         .container {
-		max-width: 210mm;
-		margin: 0 auto;
-		background: #fff;
-		padding: 0.55in;
-		position: relative;
-		}
-
-        @media print {
-            body {
-                background: #fff;
-            }
-            .container {
-                padding: 0.45in;
-                margin: 0;
-            }
+            max-width: 210mm;
+            margin: 0 auto;
+            background: #fff;
+            padding: 0.5in;
+            position: relative;
         }
 
-        /* Header */
+        @media print {
+            body { background: #fff; }
+            .container {
+                padding: 0.5in;
+                margin: 0;
+                max-width: 100%;
+            }
+            .no-print { display: none; }
+            @page {
+                size: A4;
+                margin: 0;
+            }
+            html, body {
+                width: 210mm;
+                height: auto;
+            }
+            .job-header { break-after: avoid; page-break-after: avoid; }
+            .job-position { break-after: avoid; page-break-after: avoid; }
+            .education-item { break-inside: avoid; page-break-inside: avoid; }
+            .section-title { break-after: avoid; page-break-after: avoid; }
+            .skills-grid { break-inside: avoid; page-break-inside: avoid; }
+            .summary { break-inside: avoid; page-break-inside: avoid; }
+        }
+
         .header {
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: 10px;
             border-bottom: 1px solid #000;
-            padding-bottom: 8px;
+            padding-bottom: 6px;
         }
 
         .header h1 {
@@ -58,27 +67,14 @@
             font-weight: normal;
         }
 
-        .contact {
-            font-size: 9.5pt;
-            line-height: 1.4;
-        }
+        .contact { font-size: 9.5pt; line-height: 1.4; }
+        .contact a { color: #000; text-decoration: none; }
+        .contact a:hover { text-decoration: underline; }
 
-        .contact a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* Section Headers */
-        .section {
-            margin-bottom: 5px;
-        }
+        .section { margin-bottom: 6px; }
 
         .section-title {
-            font-size: 11pt;
+            font-size: 10.5pt;
             font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 0.5px;
@@ -87,29 +83,13 @@
             padding-bottom: 2px;
         }
 
-        /* Summary */
-        .summary {
-            text-align: justify;
-            line-height: 1.4;
-        }
+        .summary { text-align: justify; line-height: 1.35; }
 
-        /* Skills */
-        .skills-grid {
-            line-height: 1.4;
-        }
+        .skills-grid { line-height: 1.35; }
+        .skill-category { margin-bottom: 2px; }
+        .skill-category strong { font-weight: bold; }
 
-        .skill-category {
-            margin-bottom: 4px;
-        }
-
-        .skill-category strong {
-            font-weight: bold;
-        }
-
-        /* Experience */
-        .job {
-            margin-bottom: 6px;
-        }
+        .job { margin-bottom: 6px; }
 
         .job-header {
             display: flex;
@@ -118,66 +98,14 @@
             margin-bottom: 2px;
         }
 
-        .job-title-company {
-            font-weight: bold;
-            font-size: 10.5pt;
-        }
+        .job-title-company { font-weight: bold; font-size: 10.5pt; }
+        .job-date { font-style: italic; font-size: 9.5pt; color: #333; }
+        .job-position { font-style: italic; margin-bottom: 4px; font-size: 9.7pt; }
 
-        .job-date {
-            font-style: italic;
-            font-size: 9.5pt;
-            color: #333;
-        }
+        .job ul { margin-left: 16px; margin-top: 2px; }
+        .job li { margin-bottom: 2px; line-height: 1.32; }
 
-        .job-position {
-            font-style: italic;
-            margin-bottom: 4px;
-            font-size: 10pt;
-        }
-
-        .job ul {
-            margin-left: 18px;
-            margin-top: 3px;
-        }
-
-        .job li {
-            margin-bottom: 2px;
-            line-height: 1.35;
-        }
-
-        /* Projects */
-        .project {
-            margin-bottom: 8px;
-        }
-
-        .project-header {
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-
-        .project-header a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        .project-description {
-            line-height: 1.4;
-        }
-
-        .project ul {
-            margin-left: 18px;
-            margin-top: 3px;
-        }
-
-        .project li {
-            margin-bottom: 3px;
-            line-height: 1.35;
-        }
-
-        /* Education */
-        .education-item {
-            margin-bottom: 6px;
-        }
+        .education-item { margin-bottom: 5px; }
 
         .education-header {
             display: flex;
@@ -185,271 +113,133 @@
             align-items: baseline;
         }
 
-        .education-school {
-            font-weight: bold;
+        .education-school { font-weight: bold; }
+        .education-date { font-style: italic; font-size: 9.5pt; color: #333; }
+
+        .download-btn {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            z-index: 1000;
         }
 
-        .education-date {
-            font-style: italic;
-            font-size: 9.5pt;
-            color: #333;
-        }
-
-        .education-degree {
-            font-size: 10pt;
-        }
-
-        /* Metrics highlighting */
-        strong.metric {
-            font-weight: bold;
-        }
-        .download-btn-en {
-        position: absolute;
-        top: 30px;
-        right: 30px;
-        z-index: 1000; /* garante que fique acima de outros elementos */
-        }
-
-        .download-btn-en a {
-            padding: 15px 25px;
-            background: #0b511d;
+        .download-btn a {
+            padding: 10px 20px;
+            background: #111;
             color: #fff;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1rem;
+            font-size: 0.9rem;
             display: inline-block;
             transition: 0.2s;
         }
 
-        .download-btn-en a:hover {
-            background: #093b14;
-        }
-
-        /* Responsividade */
-        @media (max-width: 768px) {
-            .download-btn-en {
-                top: 15px;
-                right: 15px;
-            }
-            .download-btn-en a {
-                padding: 10px 18px;
-                font-size: 0.9rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .download-btn-en {
-                top: 10px;
-                right: 10px;
-            }
-            .download-btn-en a {
-                padding: 8px 14px;
-                font-size: 0.8rem;
-            }
-        }
-        @media print {
-
-		@page {
-			size: A4;
-			margin: 12mm;
-		}
-
-		html, body {
-			width: 210mm;
-			height: auto;
-			margin: 0;
-			padding: 0;
-			background: white;
-		}
-
-		.container {
-			max-width: 100%;
-			padding: 0;
-			margin: 0;
-		}
-
-		.download-btn-en {
-			display: none;
-		}
-
-		.section,
-		.job,
-		.education-item {
-			break-inside: avoid;
-			page-break-inside: avoid;
-		}
-
-		}
-
-	@media print {
-    html, body {
-        height: auto;
-    }
-
-    .container {
-        overflow: hidden;
-    }
-}
+        .download-btn a:hover { background: #333; }
     </style>
 </head>
 <body>
-    <div class="download-btn-en">
-        <a href="resume.pdf" download>
-            Download PDF (EN)
-        </a>
+
+<div class="download-btn no-print">
+    <a href="javascript:window.print()">Print / Save PDF</a>
+</div>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <h1>DERICK BESSA</h1>
+        <div class="title">Full Stack Software Engineer | AI & Computer Vision</div>
+        <div class="contact">
+            <a href="/cdn-cgi/l/email-protection#6b0f0e19020800090e18180a5a592b0c060a020745080406"><span class="__cf_email__" data-cfemail="4a2e2f38232921282f39392b7b780a2d272b232664292527">[email&#160;protected]</span></a> |
+            <a href="https://github.com/DerickBessa" target="_blank">github.com/DerickBessa</a> |
+            <a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfolio</a> |
+            <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
+        </div>
     </div>
 
-    <div class="container" id="resume-container">
-        <!-- Header -->
-        <!-- Header -->
-<div class="header">
-	<h1>DERICK BESSA</h1>
-	<div class="title">Full-Stack Developer & AI Integration</div>
-	<div class="contact">
-		<a href="mailto:derickbessa12@gmail.com">Email: derickbessa12@gmail.com</a> |
-		<a href="https://github.com/DerickBessa" target="_blank">Github: github.com/DerickBessa</a> |
-		<a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfolio</a> |
-		<a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
-	</div>
-</div>
+    <!-- PROFESSIONAL SUMMARY -->
+    <div class="section">
+        <div class="section-title">Professional Summary</div>
+        <div class="summary">
+            Full Stack Software Engineer with approximately 2 years of experience building production web systems that combine solid engineering with applied Artificial Intelligence. Currently pursuing a Computer Science degree at IFCE while working on high-impact projects. Proven track record of performance optimization and scalable system architecture — with documented improvements of 60% in page load time, 40% reduction in database calls, and 97% accuracy in real-world computer vision systems.
+        </div>
+    </div>
 
-<!-- Professional Summary -->
-<div class="section">
-<div class="section-title">Professional Summary</div>
-<div class="summary">
-<p>
-Full-Stack Developer specialized in building scalable web applications and robust APIs using React, Next.js, Node.js, and PostgreSQL. Hands-on experience developing complete systems, from modern user interfaces to high-performance backend architectures.
+    <!-- TECHNICAL SKILLS -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="skills-grid">
+            <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, TypeScript, JavaScript, Tailwind CSS, SCSS, HTML, Angular Material, ngx-translate</div>
+            <div class="skill-category"><strong>Backend:</strong> Node.js, Java, Spring Boot, Python, FastAPI, APIs REST, JWT/OAuth2, Spring Security</div>
+            <div class="skill-category"><strong>Databases:</strong> PostgreSQL, SQLite, MySQL</div>
+            <div class="skill-category"><strong>AI & Computer Vision:</strong> LLM API Integration, YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR, PyTorch</div>
+            <div class="skill-category"><strong>DevOps & Tools:</strong> Docker, Git, GitHub Actions, Vercel, CI/CD, AWS, Swagger/OpenAPI</div>
+            <div class="skill-category"><strong>Methodologies:</strong> Agile, Scrum, Clean Code, Layered Architecture, MVVM</div>
+        </div>
+    </div>
 
-Experienced in integrating Artificial Intelligence and Computer Vision solutions into web applications, connecting Python-based models to production pipelines and APIs. Proven track record in performance optimization and architecture improvements, achieving up to 60% faster application load times and reducing database requests by 40%.
-</p>
-</div>
-</div>
+    <!-- PROFESSIONAL EXPERIENCE -->
+    <div class="section">
+        <div class="section-title">Professional Experience</div>
 
-<!-- Skills -->
-<div class="section">
-<div class="section-title">Technical Skills</div>
+        <!-- LABVICIA -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LabVicia – IFCE | Campus Fortaleza</div>
+                <div class="job-date">Sep 2025 – Present</div>
+            </div>
+            <div class="job-position">Full Stack Developer</div>
+            <ul>
+                <li>Optimized frontend performance by introducing server-side pagination, component modularization, and elimination of redundant API calls — reducing database requests by <strong>40%</strong> and increasing page load speed by <strong>60%</strong>, measured via DevTools and production monitoring.</li>
+                <li>Refactored the inbox/messaging module into isolated components (compose, list, read) with paginated loading, real-time polling with deduplication, and scroll-aware history — reducing screen load time by <strong>85%</strong>.</li>
+                <li>Redesigned <strong>10+ interfaces</strong> standardizing UX with error feedback, step-based navigation, and visual states using Angular Material (mat-stepper, mat-raised-button) — reducing user support tickets by <strong>45%</strong>.</li>
+                <li>Architected full platform internationalization for <strong>4 languages (PT, EN, ES, DE)</strong> using ngx-translate with JSON language files, enabling dynamic switching without page reloads and boosting productivity for international team members.</li>
+            </ul>
+        </div>
 
-<div class="skills-grid">
+        <!-- LAPISCO -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">LAPISCO – IFCE Research Lab | Campus Fortaleza</div>
+                <div class="job-date">Jun 2024 – Present</div>
+            </div>
+            <div class="job-position">Full Stack Developer · Part-Time</div>
+            <ul>
+                <li>Built from scratch a <strong>Python/FastAPI</strong> image processing microservice for the SFA (Automotive Inspection System), exposing results via <strong>REST API</strong> consumed by the <strong>Java/Spring Boot</strong> backend — achieving <strong>97% accuracy</strong> with AI models used as processing tools.</li>
+                <li>Actively contributed to the Spring Boot backend implementing <strong>REST endpoints, CRUD operations, JWT authentication with refresh tokens, and role-based access control</strong> via Spring Security, with stateless sessions, centralized exception handling, and PDF report generation.</li>
+                <li>Structured <strong>PostgreSQL</strong> integration for data persistence and querying, documented all APIs with <strong>Swagger/OpenAPI</strong>, and built a second microservice for <strong>Brazilian Sign Language (Libras)</strong> recognition integrated with an <strong>LLM API</strong> for natural language translation.</li>
+            </ul>
+        </div>
 
-<div class="skill-category">
-<strong>Frontend:</strong>
-React.js, Next.js, TypeScript, JavaScript, Angular, HTML, SCSS, Tailwind CSS
-</div>
+        <!-- FREELANCE -->
+        <div class="job">
+            <div class="job-header">
+                <div class="job-title-company">Gomes & Araújo Law Firm – Freelancer</div>
+                <div class="job-date">2025</div>
+            </div>
+            <div class="job-position">Front-End Developer</div>
+            <ul>
+                <li>Designed and built a complete landing page from scratch using <strong>React, Vite, and pure Tailwind CSS</strong> — structured into 8 modular sections (Hero, Practice Areas, About, Team, FAQ, Contact, and Footer) with fully responsive layout for mobile, tablet, and desktop without external UI libraries.</li>
+                <li>Implemented a <strong>Node.js/Express</strong> backend with transactional email delivery via <strong>Resend API</strong>, routing contact form messages directly to the firm with structured HTML formatting, and deployed to Vercel with a Brazilian domain configured.</li>
+                <li>The project drove a <strong>30% increase in client inquiries</strong> for the firm, consolidating the company's digital presence — and directly led to my first full-time developer position.</li>
+            </ul>
+        </div>
+    </div>
 
-<div class="skill-category">
-<strong>Backend:</strong>
-Node.js, REST APIs, GraphQL, Java, Spring Boot, JWT/OAuth2 Authentication, Python
-</div>
-
-<div class="skill-category">
-<strong>Databases:</strong>
-PostgreSQL, SQLite
-</div>
-
-<div class="skill-category">
-<strong>Programming & AI:</strong>
-OpenCV, YOLO, PyTorch, MediaPipe, OCR, CNNs, Data Augmentation, LLMs
-</div>
-
-<div class="skill-category">
-<strong>DevOps & Continuous Delivery:</strong>
-Docker, GitHub Actions, Vercel, CI/CD, Automated Deployments
-</div>
-
-<div class="skill-category">
-<strong>Testing & Methodologies:</strong>
-React Testing Library, Postman, TDD, Agile Methodologies (Trello, Jira)
-</div>
-
-</div>
-</div>
-
-<!-- Professional Experience -->
-<div class="section">
-<div class="section-title">Professional Experience</div>
-
-<!-- LABVICIA -->
-<div class="job">
-<div class="job-header">
-<div class="job-title-company">LABVICIA – IFCE | Fortaleza Campus</div>
-<div class="job-date">Sep 2025 – Present</div>
-</div>
-
-<div class="job-position">Full-Stack Developer</div>
-
-<ul>
-
-<li>Developed interfaces and features using <strong>React, Angular, and TypeScript</strong>, integrated with backend APIs in <strong>Node.js and Java/Spring Boot</strong>, improving user experience and platform scalability.</li>
-
-<li>Implemented <strong>UI/UX and performance improvements</strong>, including component modularization and PostgreSQL query optimization, reducing application load time by <strong>60%</strong> and decreasing database requests by <strong>40%</strong>.</li>
-
-<li>Led platform internationalization into <strong>4 languages</strong>, expanding global reach and contributing to a <strong>+120% increase in active user engagement</strong>.</li>
-
-<li>Implemented API monitoring and structured logging for performance analysis, improving application reliability and reducing production failures.</li>
-
-<li>Contributed to scalable architecture and development processes using clean code practices and agile methodologies, increasing team operational efficiency by approximately <strong>85%</strong>.</li>
-
-</ul>
-</div>
-
-<!-- LAPISCO -->
-<div class="job">
-<div class="job-header">
-<div class="job-title-company">LAPISCO – IFCE | Fortaleza Campus</div>
-<div class="job-date">Jun 2024 – Present</div>
-</div>
-
-<div class="job-position">Backend Developer & AI Researcher</div>
-
-<ul>
-
-<li>Developed <strong>computer vision APIs using Python and FastAPI</strong>, exposing detection models based on YOLO and MediaPipe for integration with web and mobile applications.</li>
-
-<li>Implemented backend pipelines responsible for <strong>image processing, model inference, and structured result delivery</strong>, enabling external systems to consume analysis through REST APIs.</li>
-
-<li>Designed integration with <strong>databases and dataset storage</strong>, creating Python routines for automatic image retrieval, processing, and result updates.</li>
-
-<li>Optimized image preprocessing and <strong>data augmentation techniques</strong>, achieving up to <strong>85% accuracy</strong> and <strong>90–97% precision</strong> in experimental scenarios.</li>
-
-<li>Structured experimentation pipelines and technical documentation, facilitating model maintenance and collaboration between researchers and developers.</li>
-
-</ul>
-</div>
-
-<!-- Freelance & SaaS -->
-<div class="job">
-<div class="job-header">
-<div class="job-title-company">Freelance & Independent Projects</div>
-<div class="job-date">2025 – Present</div>
-</div>
-
-<div class="job-position">Full-Stack Developer</div>
-
-<ul>
-
-<li>Developed <strong>3 landing pages for law firms</strong> using <strong>React, Next.js, and Node.js</strong>, building responsive interfaces and APIs for lead capture and management.</li>
-
-<li>Designed <strong>full-stack architecture with React, Next.js, Node.js, and PostgreSQL</strong>, implementing REST APIs, authentication, and scalable frontend-backend integrations.</li>
-
-<li>Implemented <strong>CI/CD and automated deployment with Vercel</strong>, optimizing builds and reducing deployment time by <strong>50%</strong>.</li>
-
-<li><strong>Founder of TáNaLista SaaS</strong>, an event management platform featuring <strong>QR Code check-in</strong> and backend automations built with <strong>Node.js and Python</strong>, including integrations with external APIs and experimental Computer Vision modules.</li>
-
-</ul>
-</div>
-
-<!-- Education -->
-<div class="section">
-<div class="section-title">Education & Languages</div>
-
-<div class="education-item">
-<strong>Bachelor’s Degree in Computer Science</strong> | IFCE - Fortaleza Campus | 2024 - 2028
-</div>
-
-<div class="education-item" style="margin-top:2px;">
-<strong>Languages:</strong> English (Advanced), Portuguese (Native)
-</div>
+    <!-- EDUCATION & LANGUAGES -->
+    <div class="section">
+        <div class="section-title">Education & Languages</div>
+        <div class="education-item">
+            <div class="education-header">
+                <span class="education-school">Bachelor's Degree in Computer Science – IFCE, Campus Fortaleza</span>
+                <span class="education-date">2024 – 2028</span>
+            </div>
+        </div>
+        <div class="education-item" style="margin-top: 4px;">
+            <strong>Languages:</strong> English (Advanced) · Portuguese (Native)
+        </div>
+    </div>
 
 </div>
 </body>
