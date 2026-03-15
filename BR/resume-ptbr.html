@@ -1,267 +1,296 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derick Bessa – Currículo</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Derick Bessa – Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.4;
-            color: #000;
-            background: #f5f5f5;
-            font-size: 10.5pt;
-        }
+    body {
+      font-family: 'Lora', Georgia, serif;
+      line-height: 1.35;
+      color: #111;
+      background: #f0ede8;
+      font-size: 9.8pt;
+      -webkit-font-smoothing: antialiased;
+    }
 
-        .container {
-            max-width: 210mm;
-            margin: 0 auto;
-            background: #fff;
-            padding: 0.65in;
-            position: relative;
-        }
+    .container {
+      max-width: 210mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0.5in;
+      position: relative;
+    }
 
-        @media print {
-            body { background: #fff; }
-            .container { padding: 0.55in; margin: 0; max-width: 100%; }
-            .no-print { display: none; }
-            @page { size: A4; margin: 0; }
-            html, body { width: 210mm; height: auto; }
-            .job-header { break-after: avoid; page-break-after: avoid; }
-            .job-position { break-after: avoid; page-break-after: avoid; }
-            .education-item { break-inside: avoid; page-break-inside: avoid; }
-            .section-title { break-after: avoid; page-break-after: avoid; }
-            .skills-grid { break-inside: avoid; page-break-inside: avoid; }
-            .summary { break-inside: avoid; page-break-inside: avoid; }
-        }
+    @media print {
+      body { background: #fff; }
+      .container { padding: 0.5in; margin: 0; max-width: 100%; }
+      .no-print { display: none; }
+      @page { size: A4; margin: 0; }
+      html, body { width: 210mm; height: auto; }
+      .job-header { break-after: avoid; }
+      .job-position { break-after: avoid; }
+      .education-item { break-inside: avoid; }
+      .section-title { break-after: avoid; }
+      .skills-grid { break-inside: avoid; }
+      .summary { break-inside: avoid; }
+    }
 
-        .header {
-            text-align: center;
-            margin-bottom: 14px;
-            border-bottom: 1px solid #000;
-            padding-bottom: 10px;
-        }
+    /* ── HEADER ── */
+    .header {
+      text-align: center;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 5px;
+    }
 
-        .header h1 {
-            font-size: 22pt;
-            font-weight: bold;
-            margin-bottom: 4px;
-            letter-spacing: 1px;
-        }
+    .header h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 21pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      line-height: 1.1;
+    }
 
-        .header .title {
-            font-size: 11.5pt;
-            margin-bottom: 8px;
-            font-weight: normal;
-        }
+    .header .title {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      color: #555;
+    }
 
-        .contact { font-size: 9.8pt; line-height: 1.6; }
-        .contact a { color: #000; text-decoration: none; }
-        .contact a:hover { text-decoration: underline; }
+    .contact {
+      font-size: 9.2pt;
+      line-height: 1.5;
+      color: #222;
+    }
 
-        .section { margin-bottom: 12px; }
+    .contact a { color: #111; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
 
-        .section-title {
-            font-size: 11pt;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
-            border-bottom: 1px solid #000;
-            padding-bottom: 2px;
-        }
+    /* ── SECTIONS ── */
+    .section { margin-bottom: 7px; }
 
-        .objetivo-box {
-            background: #f9f9f9;
-            border-left: 3px solid #000;
-            padding: 6px 10px;
-            font-size: 10.5pt;
-            line-height: 1.4;
-        }
+    .section-title {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 2px;
+      color: #111;
+    }
 
-        .summary { text-align: justify; line-height: 1.5; }
+    /* ── SUMMARY ── */
+    .summary { text-align: justify; line-height: 1.45; }
 
-        .skills-grid { line-height: 1.5; }
-        .skill-category { margin-bottom: 3px; }
-        .skill-category strong { font-weight: bold; }
+    /* ── SKILLS ── */
+    .skills-grid { line-height: 1.42; }
+    .skill-category { margin-bottom: 2px; }
+    .skill-category strong {
+      font-family: 'Geist Mono', monospace;
+      font-size: 8pt;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      font-style: normal;
+    }
 
-        .info-row {
-            display: flex;
-            gap: 24px;
-            line-height: 1.6;
-            font-size: 10.5pt;
-        }
+    /* ── JOBS ── */
+    .job { margin-bottom: 7px; }
 
-        .job { margin-bottom: 10px; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+      gap: 12px;
+    }
 
-        .job-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 2px;
-        }
+    .job-title-company {
+      font-weight: 700;
+      font-size: 10pt;
+      color: #111;
+    }
 
-        .job-title-company { font-weight: bold; font-size: 11pt; }
-        .job-date { font-style: italic; font-size: 9.8pt; color: #333; }
-        .job-position { font-style: italic; margin-bottom: 5px; font-size: 10.5pt; }
+    .job-date {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 300;
+      color: #666;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
 
-        .job ul { margin-left: 18px; margin-top: 3px; }
-        .job li { margin-bottom: 4px; line-height: 1.4; }
+    .job-position {
+      font-style: italic;
+      font-size: 9.5pt;
+      color: #444;
+      margin-bottom: 3px;
+    }
 
-        .education-item { margin-bottom: 6px; }
+    .job ul { margin-left: 16px; margin-top: 2px; }
+    .job li { margin-bottom: 2px; line-height: 1.4; text-align: justify; }
 
-        .education-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
+    /* ── EDUCATION ── */
+    .education-item { margin-bottom: 4px; }
 
-        .education-school { font-weight: bold; }
-        .education-date { font-style: italic; font-size: 9.8pt; color: #333; }
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
 
-        .download-btn {
-            position: fixed;
-            top: 16px;
-            right: 16px;
-            z-index: 1000;
-        }
-        .download-btn a {
-            padding: 10px 20px;
-            background: #111;
-            color: #fff;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 0.9rem;
-            display: inline-block;
-            transition: 0.2s;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.25);
-        }
-        .download-btn a:hover { background: #333; }
-    </style>
+    .education-school { font-weight: 700; }
+
+    .education-date {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 300;
+      color: #666;
+      white-space: nowrap;
+    }
+
+    /* ── PRINT BUTTON ── */
+    .download-btn { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+    .download-btn a {
+      padding: 9px 18px;
+      background: #111;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .download-btn a:hover { background: #333; }
+  </style>
 </head>
 <body>
 
 <div class="download-btn no-print">
-    <a href="javascript:window.print()">Imprimir / Salvar PDF</a>
+  <a href="javascript:window.print()">Imprimir / PDF</a>
 </div>
 
 <div class="container">
 
-    <!-- HEADER -->
-    <div class="header">
-        <h1>DERICK BESSA</h1>
-        <div class="title">Engenheiro de Software</div>
-        <div class="contact">
-            <a href="mailto:derickbessa12@gmail.com">derickbessa12@gmail.com</a> |
-            <a href="https://wa.me/5585987588044?text=Hi%21%20I%20liked%20your%20portfolio%20and%20I%27m%20curious%20to%20learn%20more%20about%20your%20work%21" target="_blank">+55 (85) 98758-8044</a> |
-            Fortaleza – CE, Serrinha |
-            <a href="https://github.com/DerickBessa" target="_blank">github.com/DerickBessa</a> |
-            <a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfólio</a> |
-            <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
-        </div>
+  <!-- HEADER -->
+  <div class="header">
+    <h1>Derick Bessa</h1>
+    <div class="title">Desenvolvedor Full-Stack</div>
+    <div class="contact">
+      <a href="mailto:derickbessa12@gmail.com">derickbessa12@gmail.com</a> |
+      <a href="tel:+5585987588044">(85) 98758-8044</a> |
+      Fortaleza – CE |
+      <a href="https://github.com/DerickBessa" target="_blank">github.com/DerickBessa</a> |
+      <a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfólio</a> |
+      <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- RESUMO -->
+  <div class="section">
+    <div class="section-title">Resumo Profissional</div>
+    <div class="summary">
+      Engenheiro de Software com foco em desenvolvimento Full Stack: React, Next.js e Angular no frontend; Node.js, Java/Spring Boot e Python/FastAPI no backend. Experiência com microserviços, integração de APIs de IA e arquiteturas REST escaláveis. Fundador do <strong>TáNaLista</strong>, SaaS de gestão de eventos com check-in via QR Code.
+    </div>
+  </div>
+
+  <!-- FORMAÇÃO & IDIOMAS -->
+  <div class="section">
+    <div class="section-title">Formação &amp; Idiomas</div>
+    <div class="education-item">
+      <div class="education-header">
+        <span class="education-school">Bacharelado em Ciência da Computação – IFCE, Campus Fortaleza</span>
+        <span class="education-date">2024 – 2028</span>
+      </div>
+    </div>
+    <div class="education-item" style="margin-top: 3px;">
+      <strong>Idiomas:</strong> Inglês (Avançado) · Português (Nativo)
+    </div>
+  </div>
+
+  <!-- HABILIDADES -->
+  <div class="section">
+    <div class="section-title">Habilidades Técnicas</div>
+    <div class="skills-grid">
+      <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, TypeScript, Tailwind CSS</div>
+      <div class="skill-category"><strong>Backend:</strong> Node.js, Java, Python, APIs REST, JWT/OAuth2</div>
+      <div class="skill-category"><strong>Bancos de Dados:</strong> PostgreSQL, SQLite, MySQL</div>
+      <div class="skill-category"><strong>IA &amp; Visão Computacional:</strong> Integração de LLMs via API, YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR</div>
+      <div class="skill-category"><strong>DevOps &amp; Ferramentas:</strong> Docker, Git, GitHub Actions, Vercel, Swagger/OpenAPI, Kanban</div>
+    </div>
+  </div>
+
+  <!-- EXPERIÊNCIA -->
+  <div class="section">
+    <div class="section-title">Experiência Profissional</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">LabVicia – IFCE, Campus Fortaleza</div>
+        <div class="job-date">Set 2025 – Atual</div>
+      </div>
+      <div class="job-position">Desenvolvedor Full Stack</div>
+      <ul>
+        <li>SaaS de gestão acadêmica em Angular + Java/Spring Boot com módulos de matrículas, contratos, calendário, tarefas e dashboards analíticos.</li>
+        <li>Melhorias de performance: paginação server-side, modularização de componentes e eliminação de chamadas redundantes à API.</li>
+        <li>Refatoração do inbox em componentes isolados com atualização automática de chat e scroll infinito.</li>
+        <li>Padronização de UX com Angular Material e internacionalização para 4 idiomas (PT, EN, ES, DE) via ngx-translate com troca dinâmica.</li>
+      </ul>
     </div>
 
-    <!-- RESUMO PROFISSIONAL -->
-    <div class="section">
-        <div class="section-title">Resumo Profissional</div>
-        <div class="summary">
-            Engenheiro de Software com foco em desenvolvimento Full Stack, atuando na construção de sistemas web de produção com React, Next.js e Angular no frontend e Node.js, Java/Spring Boot e Python/FastAPI no backend. Tenho experiência com microserviços, integração de APIs de IA e arquiteturas REST escaláveis. Curso Ciência da Computação no IFCE enquanto trabalho em projetos reais de alto impacto. Transito bem entre frontend e backend, entrego soluções completas e colaboro bem em time — sempre com foco em código limpo, boa arquitetura e experiência do usuário.
-        </div>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">LAPISCO – Laboratório de Pesquisa do IFCE, Campus Fortaleza</div>
+        <div class="job-date">Jun 2024 – Mar 2026</div>
+      </div>
+      <div class="job-position">Desenvolvedor Full Stack · Meio Período</div>
+      <ul>
+        <li>API Python/FastAPI para processamento de imagens do SFA (Sistema de Fiscalização Automotiva), integrada via REST ao backend Java/Spring Boot com autenticação JWT, controle de acesso por roles e recuperação de senha via Spring Security.</li>
+        <li>Integração com PostgreSQL, documentação Swagger/OpenAPI e microserviço de reconhecimento de Libras com LLM via API.</li>
+      </ul>
     </div>
 
-    <!-- FORMAÇÃO & IDIOMAS -->
-    <div class="section">
-        <div class="section-title">Formação & Idiomas</div>
-        <div class="education-item">
-            <div class="education-header">
-                <span class="education-school">Bacharelado em Ciência da Computação – IFCE, Campus Fortaleza</span>
-                <span class="education-date">2024 – 2028</span>
-            </div>
-        </div>
-        <div class="education-item" style="margin-top: 4px;">
-            <strong>Idiomas:</strong> Inglês (Avançado) · Português (Nativo)
-        </div>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">Gomes &amp; Araújo Advocacia – Freelancer</div>
+        <div class="job-date">2025</div>
+      </div>
+      <div class="job-position">Desenvolvedor Front-End</div>
+      <ul>
+        <li>Landing page com React 19, Vite e Tailwind CSS — 8 seções, layout responsivo, sem dependências de UI externas.</li>
+        <li>Backend Node.js/Express com emails transacionais (Resend API), CTA de WhatsApp e deploy na Vercel.</li>
+      </ul>
     </div>
 
-    <!-- HABILIDADES TÉCNICAS -->
-    <div class="section">
-        <div class="section-title">Habilidades Técnicas</div>
-        <div class="skills-grid">
-            <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, TypeScript, JavaScript, Tailwind CSS, SCSS, HTML, Angular Material, ngx-translate</div>
-            <div class="skill-category"><strong>Backend:</strong> Node.js, Express.js, Java, Spring Boot, Python, FastAPI, APIs REST, JWT/OAuth2, Spring Security, Prisma ORM</div>
-            <div class="skill-category"><strong>Bancos de Dados:</strong> PostgreSQL, SQLite, MySQL</div>
-            <div class="skill-category"><strong>IA & Ferramentas:</strong> Integração de LLMs via API, YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR, PyTorch</div>
-            <div class="skill-category"><strong>DevOps & Ferramentas:</strong> Docker, Git, GitHub Actions, Vercel, CI/CD, AWS, Swagger/OpenAPI</div>
-            <div class="skill-category"><strong>Metodologias:</strong> Agile, Scrum, Código Limpo, Arquitetura em Camadas, MVVM</div>
-        </div>
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">TáNaLista – Projeto Pessoal (Em Desenvolvimento)</div>
+        <div class="job-date">2025 – Atual</div>
+      </div>
+      <div class="job-position">Fundador &amp; Desenvolvedor Full Stack</div>
+      <ul>
+        <li>SaaS para gestão de eventos com check-in via QR Code e controle de acompanhantes — Node.js, Express, Prisma ORM e PostgreSQL.</li>
+        <li>Autenticação JWT com bcrypt, arquitetura modular e CI/CD via GitHub Actions com deploy na Vercel.</li>
+      </ul>
     </div>
-
-    <!-- EXPERIÊNCIA PROFISSIONAL -->
-    <div class="section">
-        <div class="section-title">Experiência Profissional</div>
-
-        <!-- LABVICIA -->
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title-company">LabVicia – IFCE | Campus Fortaleza</div>
-                <div class="job-date">Set 2025 – Atual</div>
-            </div>
-            <div class="job-position">Desenvolvedor Full Stack</div>
-            <ul>
-                <li>Atuei no desenvolvimento de um SaaS de gestão acadêmica completo em <strong>Angular + Java/Spring Boot</strong> — com módulos de matrículas, contratos, calendário, gestão de contatos, sistema de tarefas, dashboards analíticos e tabelas avançadas com ngx-datatable.</li>
-                <li>Otimizei a performance do frontend introduzindo paginação server-side, modularização de componentes e eliminação de chamadas redundantes à API — reduzindo em <strong>40%</strong> as requisições ao banco e aumentando em <strong>60%</strong> a velocidade de carregamento, medido via DevTools e monitoramento em produção.</li>
-                <li>Refatorei o módulo de inbox/mensagens em componentes isolados (composição, listagem e leitura) com carregamento paginado, polling em tempo real com deduplicação e histórico sensível ao scroll — reduzindo em <strong>85%</strong> o tempo de carregamento da tela.</li>
-                <li>Redesenhei <strong>10+ interfaces</strong> padronizando UX com feedback de erros, navegação por etapas e estados visuais com Angular Material (mat-stepper, mat-raised-button) — reduzindo <strong>45%</strong> dos tickets de suporte dos usuários.</li>
-                <li>Arquitetei a internacionalização completa da plataforma para <strong>4 idiomas (PT, EN, ES, DE)</strong> com ngx-translate e arquivos JSON por idioma, habilitando troca dinâmica sem recarregamento.</li>
-            </ul>
-        </div>
-
-        <!-- LAPISCO -->
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title-company">LAPISCO – Laboratório de Pesquisa do IFCE | Campus Fortaleza</div>
-                <div class="job-date">Jun 2024 – Atual</div>
-            </div>
-            <div class="job-position">Desenvolvedor Full Stack · Meio Período</div>
-            <ul>
-                <li>Desenvolvi do zero o microserviço <strong>Python/FastAPI</strong> de processamento de imagens do SFA (Sistema de Fiscalização Automotiva), expondo os resultados via <strong>API REST</strong> consumida pelo backend <strong>Java/Spring Boot</strong> — atingindo <strong>97% de precisão</strong> em ambiente real com modelos de IA como ferramenta de processamento.</li>
-                <li>Contribuí ativamente no backend Spring Boot implementando <strong>endpoints REST, operações CRUD, autenticação JWT com refresh tokens, controle de acesso por roles e recuperação de senha via email</strong> via Spring Security — com sessões stateless, tratamento centralizado de exceções e geração de relatórios em PDF disponibilizados no app mobile Flutter.</li>
-                <li>Estruturei a integração com <strong>PostgreSQL</strong>, documentei todas as APIs com <strong>Swagger/OpenAPI</strong>.
-            </ul>
-        </div>
-
-        <!-- FREELANCE -->
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title-company">Gomes & Araújo Advocacia – Freelancer</div>
-                <div class="job-date">2025</div>
-            </div>
-            <div class="job-position">Desenvolvedor Front-End</div>
-            <ul>
-                <li>Projetei e desenvolvi do zero uma landing page completa com <strong>React 19, Vite 7 e Tailwind CSS puro</strong> — estruturada em 8 seções modulares (Hero, Áreas de Atuação, Sobre, Equipe, FAQ, Contato e Footer) com layout totalmente responsivo para mobile, tablet e desktop sem bibliotecas externas de UI.</li>
-                <li>Implementei backend <strong>Node.js/Express</strong> com envio de emails transacionais via <strong>Resend API</strong> e CTAs de WhatsApp com links pré-formatados, aumentando os canais de captação de leads — com deploy na Vercel com domínio brasileiro configurado.</li>
-                <li>O projeto gerou um aumento de <strong>30% nos contatos de clientes</strong> para o escritório, consolidando a presença digital da empresa — e resultou diretamente em uma recontratação dos meus serviços como desenvolvedor para a mesma empresa.</li>
-            </ul>
-        </div>
-
-        <!-- TANALISTA -->
-        <div class="job">
-            <div class="job-header">
-                <div class="job-title-company">TáNaLista – Projeto Pessoal (Em Desenvolvimento)</div>
-                <div class="job-date">2025 – Atual</div>
-            </div>
-            <div class="job-position">Fundador & Desenvolvedor Full Stack</div>
-            <ul>
-                <li><strong>Problema:</strong> organizadores de eventos gerenciam listas de convidados manualmente via planilhas ou WhatsApp, sem controle de check-in em tempo real nem gestão de acompanhantes. <strong>Solução:</strong> plataforma SaaS com check-in via QR Code, controle de acompanhantes por convidado e painel de gestão do evento — construída com <strong>Node.js, Express, Prisma ORM e PostgreSQL</strong>, com schema relacional cobrindo Eventos, Convidados, Acompanhantes, roles e admins many-to-many.</li>
-                <li>Implementando <strong>autenticação JWT com bcrypt</strong>, API REST estruturada e arquitetura modular — com <strong>redução estimada de 70% no tempo de check-in</strong> em comparação ao processo manual, CI/CD planejado via GitHub Actions e deploy na Vercel.</li>
-            </ul>
-        </div>
-    </div>
-
-    <div style="border-top: 1px solid #000; margin-top: 12px;"></div>
+  </div>
 
 </div>
 </body>
