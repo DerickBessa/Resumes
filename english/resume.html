@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Lora', Georgia, serif;
       line-height: 1.35;
@@ -17,6 +18,7 @@
       font-size: 9.8pt;
       -webkit-font-smoothing: antialiased;
     }
+
     .container {
       max-width: 210mm;
       margin: 0 auto;
@@ -24,6 +26,7 @@
       padding: 0.5in;
       position: relative;
     }
+
     @media print {
       body { background: #fff; }
       .container { padding: 0.5in; margin: 0; max-width: 100%; }
@@ -36,14 +39,16 @@
       .section-title { break-after: avoid; }
       .skills-grid { break-inside: avoid; }
       .summary { break-inside: avoid; }
+      .project { break-inside: avoid; }
     }
-    /* ── HEADER ── */
+
     .header {
       text-align: center;
       margin-bottom: 8px;
       border-bottom: 1px solid #111;
       padding-bottom: 5px;
     }
+
     .header h1 {
       font-family: 'Lora', Georgia, serif;
       font-size: 21pt;
@@ -53,6 +58,7 @@
       margin-bottom: 3px;
       line-height: 1.1;
     }
+
     .header .title {
       font-family: 'Geist Mono', monospace;
       font-size: 7.8pt;
@@ -62,15 +68,13 @@
       margin-bottom: 7px;
       color: #555;
     }
-    .contact {
-      font-size: 9.2pt;
-      line-height: 1.5;
-      color: #222;
-    }
+
+    .contact { font-size: 9.2pt; line-height: 1.5; color: #222; }
     .contact a { color: #111; text-decoration: none; }
     .contact a:hover { text-decoration: underline; }
-    /* ── SECTIONS ── */
+
     .section { margin-bottom: 7px; }
+
     .section-title {
       font-family: 'Geist Mono', monospace;
       font-size: 7.8pt;
@@ -82,9 +86,9 @@
       padding-bottom: 2px;
       color: #111;
     }
-    /* ── SUMMARY ── */
+
     .summary { text-align: justify; line-height: 1.45; }
-    /* ── SKILLS ── */
+
     .skills-grid { line-height: 1.42; }
     .skill-category { margin-bottom: 2px; }
     .skill-category strong {
@@ -92,10 +96,10 @@
       font-size: 8pt;
       font-weight: 500;
       letter-spacing: 0.03em;
-      font-style: normal;
     }
-    /* ── JOBS ── */
+
     .job { margin-bottom: 7px; }
+
     .job-header {
       display: flex;
       justify-content: space-between;
@@ -103,11 +107,9 @@
       margin-bottom: 1px;
       gap: 12px;
     }
-    .job-title-company {
-      font-weight: 700;
-      font-size: 10pt;
-      color: #111;
-    }
+
+    .job-title-company { font-weight: 700; font-size: 10pt; color: #111; }
+
     .job-date {
       font-family: 'Geist Mono', monospace;
       font-size: 7.8pt;
@@ -116,23 +118,47 @@
       white-space: nowrap;
       flex-shrink: 0;
     }
-    .job-position {
-      font-style: italic;
-      font-size: 9.5pt;
-      color: #444;
-      margin-bottom: 3px;
-    }
+
+    .job-position { font-style: italic; font-size: 9.5pt; color: #444; margin-bottom: 3px; }
     .job ul { margin-left: 16px; margin-top: 2px; }
     .job li { margin-bottom: 2px; line-height: 1.4; text-align: justify; }
-    /* ── EDUCATION ── */
+
+    .project { margin-bottom: 7px; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+      gap: 12px;
+    }
+
+    .project-title { font-weight: 700; font-size: 10pt; color: #111; }
+
+    .project-tags {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.4pt;
+      font-weight: 300;
+      color: #666;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .project-subtitle { font-style: italic; font-size: 9.5pt; color: #444; margin-bottom: 3px; }
+    .project ul { margin-left: 16px; margin-top: 2px; }
+    .project li { margin-bottom: 2px; line-height: 1.4; text-align: justify; }
+
     .education-item { margin-bottom: 4px; }
+
     .education-header {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       gap: 12px;
     }
+
     .education-school { font-weight: 700; }
+
     .education-date {
       font-family: 'Geist Mono', monospace;
       font-size: 7.8pt;
@@ -140,7 +166,7 @@
       color: #666;
       white-space: nowrap;
     }
-    /* ── PRINT BUTTON ── */
+
     .download-btn { position: fixed; top: 20px; right: 20px; z-index: 1000; }
     .download-btn a {
       padding: 9px 18px;
@@ -159,11 +185,13 @@
   </style>
 </head>
 <body>
+
 <div class="download-btn no-print">
   <a href="javascript:window.print()">Print / PDF</a>
 </div>
+
 <div class="container">
-  <!-- HEADER -->
+
   <div class="header">
     <h1>Derick Bessa</h1>
     <div class="title">Full-Stack Developer</div>
@@ -177,20 +205,18 @@
     </div>
   </div>
 
-  <!-- SUMMARY -->
   <div class="section">
     <div class="section-title">Professional Summary</div>
     <div class="summary">
-      Full-Stack Developer with expertise across the entire stack: React, Next.js, and Angular on the frontend; Node.js, Java/Spring Boot, and Python/FastAPI on the backend. Experienced with microservices, AI API integration, and scalable REST architectures. Founder of <strong>TáNaLista</strong>, an event management SaaS featuring QR Code check-in.
+      Full-Stack Developer with experience in React, Next.js, Angular, and React Native on the frontend; Node.js, Java/Spring Boot, and Python/FastAPI on the backend. Applied research background in computer vision, integrating AI models into end-to-end mobile and web systems. Founder of <strong>TáNaLista</strong>, an event management SaaS with QR Code check-in.
     </div>
   </div>
 
-  <!-- EDUCATION & LANGUAGES -->
   <div class="section">
     <div class="section-title">Education &amp; Languages</div>
     <div class="education-item">
       <div class="education-header">
-        <span class="education-school">B.S. in Computer Science – IFCE, Fortaleza Campus</span>
+        <span class="education-school">B.Sc. in Computer Science – IFCE (Federal Institute of Ceará), Fortaleza</span>
         <span class="education-date">2024 – 2028</span>
       </div>
     </div>
@@ -199,45 +225,45 @@
     </div>
   </div>
 
-  <!-- SKILLS -->
   <div class="section">
     <div class="section-title">Technical Skills</div>
     <div class="skills-grid">
-      <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, TypeScript, Tailwind CSS</div>
-      <div class="skill-category"><strong>Backend:</strong> Node.js, Java, Python, REST APIs, JWT/OAuth2</div>
+      <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, React Native, TypeScript, Tailwind CSS</div>
+      <div class="skill-category"><strong>Backend:</strong> Node.js, Java/Spring Boot, Python/FastAPI, REST APIs, JWT/OAuth2</div>
       <div class="skill-category"><strong>Databases:</strong> PostgreSQL, SQLite, MySQL</div>
-      <div class="skill-category"><strong>AI &amp; Computer Vision:</strong> LLM integration via API, YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR</div>
-      <div class="skill-category"><strong>DevOps &amp; Tools:</strong> Docker, Git, GitHub Actions, Vercel, Swagger/OpenAPI, Kanban</div>
+      <div class="skill-category"><strong>AI &amp; Computer Vision:</strong> YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR, scikit-learn, pandas</div>
+      <div class="skill-category"><strong>DevOps &amp; Tools:</strong> Docker, Git, GitHub Actions, Vercel, Swagger/OpenAPI</div>
     </div>
   </div>
 
-  <!-- EXPERIENCE -->
   <div class="section">
     <div class="section-title">Professional Experience</div>
 
     <div class="job">
       <div class="job-header">
-        <div class="job-title-company">LabVicia – IFCE, Fortaleza Campus</div>
+        <div class="job-title-company">LabVicia – IFCE, Fortaleza</div>
         <div class="job-date">Sep 2025 – Present</div>
       </div>
-      <div class="job-position">Full-Stack Developer</div>
+      <div class="job-position">Full Stack Developer · Research Scholar</div>
       <ul>
-        <li>Academic management SaaS built with Angular + Java/Spring Boot, featuring enrollment, contracts, calendar, tasks, and analytical dashboards.</li>
-        <li>Performance improvements: server-side pagination, component modularization, and elimination of redundant API calls.</li>
-        <li>Refactored inbox into isolated components with automatic chat updates and infinite scroll.</li>
-        <li>Standardized UX with Angular Material and internationalization for 4 languages (PT, EN, ES, DE) via ngx-translate with dynamic language switching.</li>
+        <li>Implemented server-side pagination and eliminated redundant API calls, reducing data transfer volume and making table loading noticeably faster for end users.</li>
+        <li>Refactored the inbox module with infinite scroll and automatic message updates, eliminating manual refreshes and making the communication flow continuous and uninterrupted.</li>
+        <li>Delivered full internationalization for 4 languages (PT, EN, ES, DE) with dynamic switching via ngx-translate, enabling international teams to use the system with no rebuild or redeployment required.</li>
+        <li>Standardized components with Angular Material across the entire system, reducing visual inconsistencies and speeding up new screen development for the team.</li>
       </ul>
     </div>
 
     <div class="job">
       <div class="job-header">
-        <div class="job-title-company">LAPISCO – IFCE Research Lab, Fortaleza Campus</div>
+        <div class="job-title-company">LAPISCO – Research Lab at IFCE, Fortaleza</div>
         <div class="job-date">Jun 2024 – Mar 2026</div>
       </div>
-      <div class="job-position">Full-Stack Developer · Part-Time</div>
+      <div class="job-position">Research Scholar · Computer Vision &amp; Full Stack Development</div>
       <ul>
-        <li>Python/FastAPI image-processing API for the SFA (Automotive Inspection System), integrated via REST with a Java/Spring Boot backend featuring JWT authentication, role-based access control, and password recovery via Spring Security.</li>
-        <li>PostgreSQL integration, Swagger/OpenAPI documentation, and a Brazilian Sign Language (Libras) recognition microservice powered by an LLM via API.</li>
+        <li>Integrated detection and classification models (YOLOv8/v11, MediaPipe, OpenCV) with the Java/Spring Boot backend via a Python/FastAPI layer, enabling real-time processing of frames captured by the camera in the React Native app.</li>
+        <li>Built dashboards and technical reports using pandas and scikit-learn to monitor model training, allowing the team to identify bottlenecks and tune hyperparameters based on concrete data.</li>
+        <li>Refactored Java backend APIs with a focus on separation of concerns and object-oriented design, improving maintainability and reducing onboarding time for new team members.</li>
+        <li>Worked across the full AI pipeline — from image capture in the React Native frontend to result consolidation in the Java backend — ensuring traceability and data consistency across all layers.</li>
       </ul>
     </div>
 
@@ -248,24 +274,54 @@
       </div>
       <div class="job-position">Front-End Developer</div>
       <ul>
-        <li>Landing page built with React 19, Vite, and Tailwind CSS — 8 sections, responsive layout, no external UI dependencies.</li>
-        <li>Node.js/Express backend with transactional emails (Resend API), WhatsApp CTA, and deployment on Vercel.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <div class="job-title-company">TáNaLista – Personal Project (In Development)</div>
-        <div class="job-date">2025 – Present</div>
-      </div>
-      <div class="job-position">Founder &amp; Full-Stack Developer</div>
-      <ul>
-        <li>Event management SaaS with QR Code check-in and companion tracking — built with Node.js, Express, Prisma ORM, and PostgreSQL.</li>
-        <li>JWT authentication with bcrypt, modular architecture, and CI/CD via GitHub Actions with deployment on Vercel.</li>
+        <li>Delivered a complete landing page in React 19 + Vite + Tailwind CSS with 8 sections and a fully responsive layout, with no external UI library dependencies, resulting in a lighter bundle and faster load times.</li>
+        <li>Built a Node.js/Express backend with transactional email delivery (Resend API) and a WhatsApp CTA, converting page visitors into leads directly without any external CRM tool.</li>
       </ul>
     </div>
 
   </div>
+
+  <div class="section">
+    <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">SFA – Automotive Inspection System (License Plate Reader)</div>
+      </div>
+      <div class="project-subtitle">Automatic vehicle license plate recognition</div>
+      <ul>
+        <li>Achieved 97% accuracy in license plate recognition by combining detection via YOLOv8 (custom-trained model) with OpenCV preprocessing and PaddleOCR reading, making the system reliable for real-world enforcement use.</li>
+        <li>Implemented support for three plate formats (old standard, Mercosul, and motorcycle) with per-format character correction logic and automatic image rotation, eliminating failures caused by incorrect camera angles.</li>
+        <li>Exposed the pipeline as a Python/FastAPI layer integrated with the Java/Spring Boot backend, allowing computer vision processing to run in a decoupled manner with no impact on the main system's performance.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">Libras Translator</div>
+      </div>
+      <div class="project-subtitle">Brazilian Sign Language recognition from static images</div>
+      <ul>
+        <li>Built a complete ML pipeline in Python — collecting a custom dataset with 26 classes, extracting hand landmarks via MediaPipe Hands, and training a Random Forest classifier with scikit-learn — delivering a functional model for recognizing the Libras alphabet.</li>
+        <li>Applied relative coordinate normalization to ensure scale and position invariance, making the model robust to variations in camera distance and framing without the need for retraining.</li>
+        <li>Implemented an inference module with OpenCV to visualize landmarks and overlay predictions on the image, enabling fast visual model validation without a dedicated interface.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">TáNaLista</div>
+      </div>
+      <div class="project-subtitle">Event management SaaS with QR Code check-in</div>
+      <ul>
+        <li>Built a SaaS platform in Node.js, Express, and PostgreSQL with Prisma ORM for QR Code check-in and real-time guest tracking, eliminating manual lists and reducing event entry time for organizers.</li>
+        <li>Implemented JWT authentication with bcrypt and a modular architecture, ensuring secure access control and enabling each system module to evolve independently.</li>
+        <li>Configured CI/CD with GitHub Actions and automated deployment to Vercel, eliminating manual deploys and ensuring every merge to main is immediately live in production.</li>
+      </ul>
+    </div>
+
+  </div>
+
 </div>
 </body>
 </html>

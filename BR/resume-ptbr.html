@@ -39,9 +39,9 @@
       .section-title { break-after: avoid; }
       .skills-grid { break-inside: avoid; }
       .summary { break-inside: avoid; }
+      .project { break-inside: avoid; }
     }
 
-    /* ── HEADER ── */
     .header {
       text-align: center;
       margin-bottom: 8px;
@@ -69,16 +69,10 @@
       color: #555;
     }
 
-    .contact {
-      font-size: 9.2pt;
-      line-height: 1.5;
-      color: #222;
-    }
-
+    .contact { font-size: 9.2pt; line-height: 1.5; color: #222; }
     .contact a { color: #111; text-decoration: none; }
     .contact a:hover { text-decoration: underline; }
 
-    /* ── SECTIONS ── */
     .section { margin-bottom: 7px; }
 
     .section-title {
@@ -93,10 +87,8 @@
       color: #111;
     }
 
-    /* ── SUMMARY ── */
     .summary { text-align: justify; line-height: 1.45; }
 
-    /* ── SKILLS ── */
     .skills-grid { line-height: 1.42; }
     .skill-category { margin-bottom: 2px; }
     .skill-category strong {
@@ -104,10 +96,8 @@
       font-size: 8pt;
       font-weight: 500;
       letter-spacing: 0.03em;
-      font-style: normal;
     }
 
-    /* ── JOBS ── */
     .job { margin-bottom: 7px; }
 
     .job-header {
@@ -118,11 +108,7 @@
       gap: 12px;
     }
 
-    .job-title-company {
-      font-weight: 700;
-      font-size: 10pt;
-      color: #111;
-    }
+    .job-title-company { font-weight: 700; font-size: 10pt; color: #111; }
 
     .job-date {
       font-family: 'Geist Mono', monospace;
@@ -133,17 +119,35 @@
       flex-shrink: 0;
     }
 
-    .job-position {
-      font-style: italic;
-      font-size: 9.5pt;
-      color: #444;
-      margin-bottom: 3px;
-    }
-
+    .job-position { font-style: italic; font-size: 9.5pt; color: #444; margin-bottom: 3px; }
     .job ul { margin-left: 16px; margin-top: 2px; }
     .job li { margin-bottom: 2px; line-height: 1.4; text-align: justify; }
 
-    /* ── EDUCATION ── */
+    .project { margin-bottom: 7px; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+      gap: 12px;
+    }
+
+    .project-title { font-weight: 700; font-size: 10pt; color: #111; }
+
+    .project-tags {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.4pt;
+      font-weight: 300;
+      color: #666;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .project-subtitle { font-style: italic; font-size: 9.5pt; color: #444; margin-bottom: 3px; }
+    .project ul { margin-left: 16px; margin-top: 2px; }
+    .project li { margin-bottom: 2px; line-height: 1.4; text-align: justify; }
+
     .education-item { margin-bottom: 4px; }
 
     .education-header {
@@ -163,7 +167,6 @@
       white-space: nowrap;
     }
 
-    /* ── PRINT BUTTON ── */
     .download-btn { position: fixed; top: 20px; right: 20px; z-index: 1000; }
     .download-btn a {
       padding: 9px 18px;
@@ -189,7 +192,6 @@
 
 <div class="container">
 
-  <!-- HEADER -->
   <div class="header">
     <h1>Derick Bessa</h1>
     <div class="title">Desenvolvedor Full-Stack</div>
@@ -203,15 +205,13 @@
     </div>
   </div>
 
-  <!-- RESUMO -->
   <div class="section">
     <div class="section-title">Resumo Profissional</div>
     <div class="summary">
-     	Desenvolvedor Full-Stack com foco em desenvolvimento Full Stack: React, Next.js e Angular no frontend; Node.js, Java/Spring Boot e Python/FastAPI no backend. Experiência com microserviços, integração de APIs de IA e arquiteturas REST escaláveis. Fundador do <strong>TáNaLista</strong>, SaaS de gestão de eventos com check-in via QR Code.
+      Desenvolvedor Full-Stack com experiência em React, Next.js, Angular e React Native no frontend; Node.js, Java/Spring Boot e Python/FastAPI no backend. Atuei em pesquisa aplicada de visão computacional, integrando modelos de IA em sistemas mobile e web de ponta a ponta. Fundador do <strong>TáNaLista</strong>, SaaS de gestão de eventos com check-in via QR Code.
     </div>
   </div>
 
-  <!-- FORMAÇÃO & IDIOMAS -->
   <div class="section">
     <div class="section-title">Formação &amp; Idiomas</div>
     <div class="education-item">
@@ -225,19 +225,17 @@
     </div>
   </div>
 
-  <!-- HABILIDADES -->
   <div class="section">
     <div class="section-title">Habilidades Técnicas</div>
     <div class="skills-grid">
-      <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, TypeScript, Tailwind CSS</div>
-      <div class="skill-category"><strong>Backend:</strong> Node.js, Java, Python, APIs REST, JWT/OAuth2</div>
+      <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, React Native, TypeScript, Tailwind CSS</div>
+      <div class="skill-category"><strong>Backend:</strong> Node.js, Java/Spring Boot, Python/FastAPI, APIs REST, JWT/OAuth2</div>
       <div class="skill-category"><strong>Bancos de Dados:</strong> PostgreSQL, SQLite, MySQL</div>
-      <div class="skill-category"><strong>IA &amp; Visão Computacional:</strong> Integração de LLMs via API, YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR</div>
-      <div class="skill-category"><strong>DevOps &amp; Ferramentas:</strong> Docker, Git, GitHub Actions, Vercel, Swagger/OpenAPI, Kanban</div>
+      <div class="skill-category"><strong>IA &amp; Visão Computacional:</strong> YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR, scikit-learn, pandas</div>
+      <div class="skill-category"><strong>DevOps &amp; Ferramentas:</strong> Docker, Git, GitHub Actions, Vercel, Swagger/OpenAPI</div>
     </div>
   </div>
 
-  <!-- EXPERIÊNCIA -->
   <div class="section">
     <div class="section-title">Experiência Profissional</div>
 
@@ -246,12 +244,12 @@
         <div class="job-title-company">LabVicia – IFCE, Campus Fortaleza</div>
         <div class="job-date">Set 2025 – Atual</div>
       </div>
-      <div class="job-position">Desenvolvedor Full Stack</div>
+      <div class="job-position">Desenvolvedor Full Stack · Bolsista de Pesquisa</div>
       <ul>
-        <li>SaaS de gestão acadêmica em Angular + Java/Spring Boot com módulos de matrículas, contratos, calendário, tarefas e dashboards analíticos.</li>
-        <li>Melhorias de performance: paginação server-side, modularização de componentes e eliminação de chamadas redundantes à API.</li>
-        <li>Refatoração do inbox em componentes isolados com atualização automática de chat e scroll infinito.</li>
-        <li>Padronização de UX com Angular Material e internacionalização para 4 idiomas (PT, EN, ES, DE) via ngx-translate com troca dinâmica.</li>
+        <li>Implementei paginação server-side e eliminei chamadas redundantes à API, reduzindo o volume de dados trafegados e tornando o carregamento de tabelas perceptivelmente mais rápido para os usuários.</li>
+        <li>Refatorei o módulo de inbox com scroll infinito e atualização automática de mensagens, eliminando recarregamentos manuais e tornando o fluxo de comunicação contínuo e sem interrupções.</li>
+        <li>Entreguei internacionalização completa para 4 idiomas (PT, EN, ES, DE) com troca dinâmica via ngx-translate, habilitando equipes internacionais a usar o sistema sem necessidade de rebuild ou novo deploy.</li>
+        <li>Padronizei componentes com Angular Material em todo o sistema, reduzindo inconsistências visuais e acelerando o desenvolvimento de novas telas pela equipe.</li>
       </ul>
     </div>
 
@@ -260,10 +258,12 @@
         <div class="job-title-company">LAPISCO – Laboratório de Pesquisa do IFCE, Campus Fortaleza</div>
         <div class="job-date">Jun 2024 – Mar 2026</div>
       </div>
-      <div class="job-position">Desenvolvedor Full Stack · Meio Período</div>
+      <div class="job-position">Pesquisador Bolsista · Visão Computacional &amp; Desenvolvimento Full Stack</div>
       <ul>
-        <li>API Python/FastAPI para processamento de imagens do SFA (Sistema de Fiscalização Automotiva), integrada via REST ao backend Java/Spring Boot com autenticação JWT, controle de acesso por roles e recuperação de senha via Spring Security.</li>
-        <li>Integração com PostgreSQL, documentação Swagger/OpenAPI e microserviço de reconhecimento de Libras com LLM via API.</li>
+        <li>Integrei modelos de detecção e classificação (YOLOv8/v11, MediaPipe, OpenCV) ao backend Java/Spring Boot via API Python/FastAPI, viabilizando o processamento em tempo real de frames capturados pela câmera no app React Native.</li>
+        <li>Construí dashboards e relatórios técnicos com pandas e scikit-learn para monitoramento do treinamento dos modelos, permitindo que a equipe identificasse gargalos e ajustasse hiperparâmetros com base em dados concretos.</li>
+        <li>Refatorei APIs no backend Java com foco em separação de responsabilidades e orientação a objetos, aumentando a manutenibilidade e reduzindo o tempo de onboarding de novos membros à base de código.</li>
+        <li>Atuei em todo o ciclo do pipeline de IA — desde a captura de imagem no frontend React Native até a consolidação dos resultados no backend Java — garantindo rastreabilidade e consistência do fluxo de dados entre as camadas.</li>
       </ul>
     </div>
 
@@ -274,22 +274,52 @@
       </div>
       <div class="job-position">Desenvolvedor Front-End</div>
       <ul>
-        <li>Landing page com React 19, Vite e Tailwind CSS — 8 seções, layout responsivo, sem dependências de UI externas.</li>
-        <li>Backend Node.js/Express com emails transacionais (Resend API), CTA de WhatsApp e deploy na Vercel.</li>
+        <li>Entreguei landing page completa em React 19 + Vite + Tailwind CSS com 8 seções e layout totalmente responsivo, sem dependências de bibliotecas de UI externas, resultando em bundle mais leve e menor tempo de carregamento.</li>
+        <li>Implementei backend Node.js/Express com emails transacionais (Resend API) e CTA de WhatsApp, convertendo visitantes em leads diretamente a partir da página sem necessidade de ferramenta externa de CRM.</li>
       </ul>
     </div>
 
-    <div class="job">
-      <div class="job-header">
-        <div class="job-title-company">TáNaLista – Projeto Pessoal (Em Desenvolvimento)</div>
-        <div class="job-date">2025 – Atual</div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Projetos</div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">SFA – Sistema de Fiscalização Automotiva (Leitor de Placas)</div>
       </div>
-      <div class="job-position">Fundador &amp; Desenvolvedor Full Stack</div>
+      <div class="project-subtitle">Reconhecimento automático de placas veiculares</div>
       <ul>
-        <li>SaaS para gestão de eventos com check-in via QR Code e controle de acompanhantes — Node.js, Express, Prisma ORM e PostgreSQL.</li>
-        <li>Autenticação JWT com bcrypt, arquitetura modular e CI/CD via GitHub Actions com deploy na Vercel.</li>
+        <li>Atingi 97% de precisão no reconhecimento de placas ao combinar detecção via YOLOv8 (modelo customizado) com pré-processamento em OpenCV e leitura com PaddleOCR, tornando o sistema confiável para uso em fiscalização real.</li>
+        <li>Implementei suporte a três formatos (placa antiga, Mercosul e moto) com lógica de correção de caracteres por formato e auto-rotação de imagem, eliminando falhas causadas por enquadramentos incorretos da câmera.</li>
+        <li>Expus o pipeline como API Python/FastAPI integrada ao backend Java/Spring Boot, permitindo que o processamento de visão computacional ocorra de forma desacoplada e sem impacto na performance do sistema principal.</li>
       </ul>
     </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">Tradutor de Libras</div>
+      </div>
+      <div class="project-subtitle">Reconhecimento de sinais da Língua Brasileira de Sinais em imagens estáticas</div>
+      <ul>
+        <li>Construí pipeline completo de ML em Python — coleta de dataset próprio com 26 classes, extração de landmarks via MediaPipe Hands e treinamento de classificador Random Forest com scikit-learn — entregando um modelo funcional de reconhecimento do alfabeto em Libras.</li>
+        <li>Apliquei normalização de coordenadas relativas para garantir invariância de escala e posição, tornando o modelo robusto a variações de distância e enquadramento da câmera sem necessidade de retraining.</li>
+        <li>Implementei módulo de inferência com OpenCV para visualização dos landmarks e predição desenhada sobre a imagem, permitindo validação visual rápida do modelo sem necessidade de interface dedicada.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">TáNaLista</div>
+      </div>
+      <div class="project-subtitle">SaaS de gestão de eventos com check-in via QR Code</div>
+      <ul>
+        <li>Desenvolvi plataforma SaaS em Node.js, Express e PostgreSQL com Prisma ORM para check-in via QR Code e controle de acompanhantes em tempo real, eliminando listas manuais e reduzindo o tempo de entrada em eventos.</li>
+        <li>Implementei autenticação JWT com bcrypt e arquitetura modular, garantindo segurança no acesso e facilitando a evolução independente de cada módulo do sistema.</li>
+        <li>Configurei CI/CD com GitHub Actions e deploy automatizado na Vercel, eliminando deploys manuais e garantindo que cada merge em main esteja imediatamente em produção.</li>
+      </ul>
+    </div>
+
   </div>
 
 </div>
