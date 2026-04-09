@@ -194,13 +194,13 @@
 
   <div class="header">
     <h1>Derick Bessa</h1>
-    <div class="title">Full-Stack Developer</div>
+    <div class="title">Full-Stack Developer · C# / .NET</div>
     <div class="contact">
       <a href="mailto:derickbessa12@gmail.com">derickbessa12@gmail.com</a> |
       <a href="tel:+5585987588044">+55 (85) 98758-8044</a> |
       Fortaleza, Brazil |
       <a href="https://github.com/DerickBessa" target="_blank">GitHub</a> |
-      <a href="https://derickbessa.github.io" target="_blank">Portfolio</a> |
+      <a href="https://derickbessa-portfolio-2026.vercel.app/" target="_blank">Portfolio</a> |
       <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
     </div>
   </div>
@@ -208,7 +208,7 @@
   <div class="section">
     <div class="section-title">Professional Summary</div>
     <div class="summary">
-      Full-Stack Developer with experience in React, Next.js, Angular, and React Native on the frontend; Node.js, Java/Spring Boot, and Python/FastAPI on the backend. Applied research background in computer vision, integrating AI models into end-to-end mobile and web systems. Founder of <strong>TáNaLista</strong>, an event management SaaS with QR Code check-in.
+      Full-Stack Developer with a primary focus on C# and .NET, experienced in building REST APIs with ASP.NET Core, Entity Framework Core, and clean MVC/layered architectures. Also proficient across the frontend stack with React, Next.js, Angular, and React Native, and on the backend with Java/Spring Boot and Python/FastAPI. Applied research background in computer vision, integrating AI models into end-to-end systems. Founder of <strong>TáNaLista</strong>, an event management SaaS with QR Code check-in.
     </div>
   </div>
 
@@ -228,11 +228,12 @@
   <div class="section">
     <div class="section-title">Technical Skills</div>
     <div class="skills-grid">
-      <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, React Native, TypeScript, Tailwind CSS</div>
-      <div class="skill-category"><strong>Backend:</strong> Node.js, Java/Spring Boot, Python/FastAPI, REST APIs, JWT/OAuth2</div>
-      <div class="skill-category"><strong>Databases:</strong> PostgreSQL, SQLite, MySQL</div>
+      <div class="skill-category"><strong>Primary Backend:</strong> C#, ASP.NET Core, Entity Framework Core, REST APIs, JWT/OAuth2, SQLite, SQL Server, Swagger/OpenAPI</div>
+      <div class="skill-category"><strong>Secondary Backend:</strong> Java/Spring Boot, Python/FastAPI</div>
+      <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, React Native, TypeScript, Tailwind CSS, React Hook Form, Zod</div>
+      <div class="skill-category"><strong>Databases:</strong> PostgreSQL, SQLite, MySQL, SQL Server</div>
       <div class="skill-category"><strong>AI &amp; Computer Vision:</strong> YOLOv8/v11, OpenCV, MediaPipe, PaddleOCR, scikit-learn, pandas</div>
-      <div class="skill-category"><strong>DevOps &amp; Tools:</strong> Docker, Git, GitHub Actions, Vercel, Swagger/OpenAPI</div>
+      <div class="skill-category"><strong>DevOps &amp; Tools:</strong> Docker, Git, GitHub Actions, Vercel, xUnit</div>
     </div>
   </div>
 
@@ -261,9 +262,9 @@
       <div class="job-position">Research Scholar · Computer Vision &amp; Full Stack Development</div>
       <ul>
         <li>Integrated detection and classification models (YOLOv8/v11, MediaPipe, OpenCV) with the Java/Spring Boot backend via a Python/FastAPI layer, enabling real-time processing of frames captured by the camera in the React Native app.</li>
+        <li>Refactored Java backend APIs applying separation of concerns and object-oriented design principles — a discipline also applied in C#/.NET projects, improving maintainability and reducing onboarding time for new team members.</li>
         <li>Built dashboards and technical reports using pandas and scikit-learn to monitor model training, allowing the team to identify bottlenecks and tune hyperparameters based on concrete data.</li>
-        <li>Refactored Java backend APIs with a focus on separation of concerns and object-oriented design, improving maintainability and reducing onboarding time for new team members.</li>
-        <li>Worked across the full AI pipeline — from image capture in the React Native frontend to result consolidation in the Java backend — ensuring traceability and data consistency across all layers.</li>
+        <li>Worked across the full AI pipeline — from image capture in the React Native frontend to result consolidation in the backend — ensuring traceability and data consistency across all layers.</li>
       </ul>
     </div>
 
@@ -272,10 +273,10 @@
         <div class="job-title-company">Gomes &amp; Araújo Law Firm – Freelance</div>
         <div class="job-date">2025</div>
       </div>
-      <div class="job-position">Front-End Developer</div>
+      <div class="job-position">Full-Stack Developer</div>
       <ul>
         <li>Delivered a complete landing page in React 19 + Vite + Tailwind CSS with 8 sections and a fully responsive layout, with no external UI library dependencies, resulting in a lighter bundle and faster load times.</li>
-        <li>Built a Node.js/Express backend with transactional email delivery (Resend API) and a WhatsApp CTA, converting page visitors into leads directly without any external CRM tool.</li>
+        <li>Built a C# / ASP.NET Core backend with transactional email delivery (Resend API) and a WhatsApp CTA, converting page visitors into leads directly without any external CRM tool.</li>
       </ul>
     </div>
 
@@ -283,6 +284,19 @@
 
   <div class="section">
     <div class="section-title">Projects</div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">AgileShop – Product Catalog</div>
+        <div class="project-tags">C# · .NET 10 · EF Core · React · TypeScript</div>
+      </div>
+      <div class="project-subtitle">Fullstack product catalog management app built as a technical challenge for an internship at Agilean</div>
+      <ul>
+        <li>Built the backend with C# and ASP.NET Core following the MVC pattern, with a DTO layer separating the API contract from database entities and Entity Framework Core (Code First + Migrations) managing a SQLite database — zero setup required for any evaluator to run the project.</li>
+        <li>Implemented REST API endpoints for full CRUD, consumed by a React 18 + TypeScript + Tailwind CSS frontend with React Hook Form + Zod for validated forms, Axios for HTTP, and Context API with custom hooks for state management.</li>
+        <li>Delivered product grid with search, category/availability filters, sorting, pagination, low-stock indicators, metrics dashboard, and dark mode — all in a single cohesive interface.</li>
+      </ul>
+    </div>
 
     <div class="project">
       <div class="project-header">
@@ -298,25 +312,24 @@
 
     <div class="project">
       <div class="project-header">
+        <div class="project-title">TáNaLista</div>
+      </div>
+      <div class="project-subtitle">Event management SaaS with QR Code check-in</div>
+      <ul>
+        <li>Built a SaaS platform with QR Code check-in and real-time guest tracking using a C# / ASP.NET Core backend, PostgreSQL via Entity Framework Core, eliminating manual lists and reducing event entry time for organizers.</li>
+        <li>Implemented JWT authentication with bcrypt and a modular architecture, ensuring secure access control and enabling each system module to evolve independently.</li>
+        <li>Configured CI/CD with GitHub Actions and automated deployment to Vercel, eliminating manual deploys and ensuring every merge to main is immediately live in production.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
         <div class="project-title">Libras Translator</div>
       </div>
       <div class="project-subtitle">Brazilian Sign Language recognition from static images</div>
       <ul>
         <li>Built a complete ML pipeline in Python — collecting a custom dataset with 26 classes, extracting hand landmarks via MediaPipe Hands, and training a Random Forest classifier with scikit-learn — delivering a functional model for recognizing the Libras alphabet.</li>
         <li>Applied relative coordinate normalization to ensure scale and position invariance, making the model robust to variations in camera distance and framing without the need for retraining.</li>
-        <li>Implemented an inference module with OpenCV to visualize landmarks and overlay predictions on the image, enabling fast visual model validation without a dedicated interface.</li>
-      </ul>
-    </div>
-
-    <div class="project">
-      <div class="project-header">
-        <div class="project-title">TáNaLista</div>
-      </div>
-      <div class="project-subtitle">Event management SaaS with QR Code check-in</div>
-      <ul>
-        <li>Built a SaaS platform in Node.js, Express, and PostgreSQL with Prisma ORM for QR Code check-in and real-time guest tracking, eliminating manual lists and reducing event entry time for organizers.</li>
-        <li>Implemented JWT authentication with bcrypt and a modular architecture, ensuring secure access control and enabling each system module to evolve independently.</li>
-        <li>Configured CI/CD with GitHub Actions and automated deployment to Vercel, eliminating manual deploys and ensuring every merge to main is immediately live in production.</li>
       </ul>
     </div>
 

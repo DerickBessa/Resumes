@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vitória Régia – Currículo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Geist+Mono:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Lora', Georgia, serif;
+      line-height: 1.35;
+      color: #111;
+      background: #f0ede8;
+      font-size: 9.8pt;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 210mm;
+      margin: 0 auto;
+      background: #fff;
+      padding: 0.5in;
+      position: relative;
+    }
+
+    @media print {
+      body { background: #fff; }
+      .container { padding: 0.5in; margin: 0; max-width: 100%; }
+      .no-print { display: none; }
+      @page { size: A4; margin: 0; }
+      html, body { width: 210mm; height: auto; }
+      .job-header { break-after: avoid; }
+      .job-position { break-after: avoid; }
+      .education-item { break-inside: avoid; }
+      .section-title { break-after: avoid; }
+      .skills-grid { break-inside: avoid; }
+      .summary { break-inside: avoid; }
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 8px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 5px;
+    }
+
+    .header h1 {
+      font-family: 'Lora', Georgia, serif;
+      font-size: 21pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+      line-height: 1.1;
+    }
+
+    .header .title {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+      color: #555;
+    }
+
+    .contact { font-size: 9.2pt; line-height: 1.5; color: #222; }
+    .contact a { color: #111; text-decoration: none; }
+    .contact a:hover { text-decoration: underline; }
+
+    .section { margin-bottom: 7px; }
+
+    .section-title {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+      border-bottom: 1px solid #111;
+      padding-bottom: 2px;
+      color: #111;
+    }
+
+    .summary { text-align: justify; line-height: 1.45; }
+
+    .skills-grid { line-height: 1.42; }
+    .skill-category { margin-bottom: 2px; }
+    .skill-category strong {
+      font-family: 'Geist Mono', monospace;
+      font-size: 8pt;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+    }
+
+    .job { margin-bottom: 7px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 1px;
+      gap: 12px;
+    }
+
+    .job-title-company { font-weight: 700; font-size: 10pt; color: #111; }
+
+    .job-date {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 300;
+      color: #666;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .job-position { font-style: italic; font-size: 9.5pt; color: #444; margin-bottom: 3px; }
+    .job ul { margin-left: 16px; margin-top: 2px; }
+    .job li { margin-bottom: 2px; line-height: 1.4; text-align: justify; }
+
+    .education-item { margin-bottom: 4px; }
+
+    .education-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 12px;
+    }
+
+    .education-school { font-weight: 700; }
+
+    .education-date {
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 300;
+      color: #666;
+      white-space: nowrap;
+    }
+
+    .download-btn { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+    .download-btn a {
+      padding: 9px 18px;
+      background: #111;
+      color: #fff;
+      border-radius: 3px;
+      text-decoration: none;
+      font-family: 'Geist Mono', monospace;
+      font-size: 7.8pt;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .download-btn a:hover { background: #333; }
+  </style>
+</head>
+<body>
+
+<div class="download-btn no-print">
+  <a href="javascript:window.print()">Imprimir / PDF</a>
+</div>
+
+<div class="container">
+
+  <div class="header">
+    <h1>Vitória Régia Moreira Salvador</h1>
+    <div class="title">Graduanda em Direito</div>
+    <div class="contact">
+      <a href="/cdn-cgi/l/email-protection#bfc9d6cbd0cdd6decddad8d6de8c8f8f8bffd8d2ded6d391dcd0d2"><span class="__cf_email__" data-cfemail="681e011c071a01091a0d0f01095b58585c280f05090104460b0705">[email&#160;protected]</span></a> |
+      <a href="tel:+5585986606926">(85) 98660-6926</a> |
+      Fortaleza – CE
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Resumo Profissional</div>
+    <div class="summary">
+      Graduanda em Direito pela Universidade Federal do Ceará, com atuação prática em consultoria jurídica, mediação e assessoria comunitária. Comprometida com a promoção da justiça social, aliando rigor técnico-jurídico à comunicação não violenta e à escuta ativa. Experiência em redação jurídica, análise de normas, gestão de prazos e atendimento ao cliente em contextos interdisciplinares.
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Formação &amp; Idiomas</div>
+    <div class="education-item">
+      <div class="education-header">
+        <span class="education-school">Bacharelado em Direito – Universidade Federal do Ceará (UFC), Faculdade de Direito</span>
+        <span class="education-date">2025 – 2030</span>
+      </div>
+    </div>
+    <div class="education-item" style="margin-top: 3px;">
+      <div class="education-header">
+        <span class="education-school">Extensão em Língua Inglesa – UFC, Casa de Cultura Britânica</span>
+        <span class="education-date">2025 – 2028</span>
+      </div>
+    </div>
+    <div class="education-item" style="margin-top: 3px;">
+      <strong>Idiomas:</strong> Português (Nativo) · Inglês (Em formação)
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Experiência Profissional</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">EJUDI Soluções Jurídicas</div>
+        <div class="job-date">Jan 2026 – Atual</div>
+      </div>
+      <div class="job-position">Consultora Jurídica</div>
+      <ul>
+        <li>Prestei consultoria jurídica em Direito Contratual, elaborando, preenchendo e revisando contratos, termos e documentos societários com atenção à segurança jurídica das partes.</li>
+        <li>Atuei em assessoria em inadimplência, incluindo elaboração, preenchimento e revisão de notificações extrajudiciais e acompanhamento de processos em curso.</li>
+        <li>Realizei interpretação e análise de normas aplicáveis a cada demanda, fundamentando pareceres e estratégias com base em legislação, doutrina e jurisprudência pertinentes.</li>
+        <li>Conduzi redação jurídica e argumentação personalizada, adaptando a linguagem e a linha de raciocínio ao perfil e às necessidades específicas de cada cliente.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">Núcleo de Mediação e Conciliação da UFC – Dialogar</div>
+        <div class="job-date">2025</div>
+      </div>
+      <div class="job-position">Assessoria Jurídica Comunitária</div>
+      <ul>
+        <li>Elaborei pareceres jurídicos voltados à orientação de comunidades vulneráveis, contribuindo para a efetivação de direitos e o acesso à justiça em contextos de baixa renda.</li>
+        <li>Apliquei gestão de riscos e estratégia jurídica na análise de demandas comunitárias, identificando vulnerabilidades e propondo soluções adequadas ao contexto social dos assistidos.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">Cuidado Itinerante</div>
+        <div class="job-date">2025</div>
+      </div>
+      <div class="job-position">Assessoria Jurídica Comunitária</div>
+      <ul>
+        <li>Utilizei comunicação clara e não violenta (CNV) e escuta ativa no atendimento a clientes, criando ambiente de confiança e facilitando a resolução de conflitos de forma empática e responsável.</li>
+        <li>Exerci proatividade e iniciativa na resolução de demandas, antecipando necessidades dos assistidos e propondo encaminhamentos antes mesmo da formalização das solicitações.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div class="job-title-company">UFC Conecta – EJUDI Soluções Jurídicas</div>
+        <div class="job-date">2025</div>
+      </div>
+      <div class="job-position">Assessora de Infraestrutura</div>
+      <ul>
+        <li>Atuei na maior feira de carreiras e recrutamento da Universidade Federal do Ceará, evento com mais de 600 inscritos organizado pela empresa júnior de Direito da UFC, reunindo estudantes de diversas áreas e recrutadores de grandes empresas parceiras públicas e privadas.</li>
+        <li>Garantí a correta recepção dos parceiros e expositores, verificando e assegurando o cumprimento das condições previstas em contrato para cada estande, contribuindo para a fluidez operacional do evento.</li>
+        <li>Coordenei aspectos logísticos da infraestrutura do evento, assegurando que o espaço físico e os recursos disponíveis atendessem às exigências dos parceiros e ao fluxo de mais de 600 participantes ao longo dos dois dias de realização.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="section">
+    <div class="section-title">Competências</div>
+    <div class="skills-grid">
+      <div class="skill-category"><strong>Jurídico:</strong> Redação jurídica, elaboração de contratos e pareceres, análise normativa, assessoria em inadimplência, estratégia jurídica</div>
+      <div class="skill-category"><strong>Mediação &amp; Atendimento:</strong> Comunicação Não Violenta (CNV), escuta ativa, gestão de conflitos, atendimento interdisciplinar</div>
+      <div class="skill-category"><strong>Gestão &amp; Organização:</strong> Controle de prazos e demandas simultâneas, planejamento estratégico, definição de metas, gestão de relacionamento com clientes</div>
+      <div class="skill-category"><strong>Transversais:</strong> Trabalho em equipe, visão analíti
