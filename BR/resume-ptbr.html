@@ -40,6 +40,7 @@
       .skills-grid { break-inside: avoid; }
       .summary { break-inside: avoid; }
       .project { break-inside: avoid; }
+      .job { break-inside: avoid; }
     }
 
     .header {
@@ -72,6 +73,14 @@
     .contact { font-size: 9.2pt; line-height: 1.5; color: #222; }
     .contact a { color: #111; text-decoration: none; }
     .contact a:hover { text-decoration: underline; }
+
+    .contact.links {
+      font-family: 'Geist Mono', monospace;
+      font-size: 8pt;
+      letter-spacing: -0.005em;
+      color: #333;
+    }
+    .contact.links a { color: #333; }
 
     .section { margin-bottom: 7px; }
 
@@ -120,6 +129,7 @@
     }
 
     .job-position { font-style: italic; font-size: 9.5pt; color: #444; margin-bottom: 3px; }
+    .job-subtitle { font-style: italic; font-size: 9.3pt; color: #444; margin-bottom: 3px; }
     .job ul { margin-left: 16px; margin-top: 2px; }
     .job li { margin-bottom: 2px; line-height: 1.4; text-align: justify; }
 
@@ -198,17 +208,19 @@
     <div class="contact">
       <a href="mailto:derickbessa12@gmail.com">derickbessa12@gmail.com</a> |
       <a href="https://wa.me/5585987588044">(85) 98758-8044</a> |
-      Fortaleza – CE |
-      <a href="https://github.com/DerickBessa" target="_blank">Github</a> |
-      <a href="https://derickbessa.github.io" target="_blank">Portfólio</a> |
-      <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">LinkedIn</a>
+      Fortaleza – CE
+    </div>
+    <div class="contact links">
+      <a href="https://github.com/DerickBessa" target="_blank">github.com/DerickBessa</a> |
+      <a href="https://www.linkedin.com/in/derickbessa/" target="_blank">linkedin.com/in/derickbessa</a> |
+      <a href="https://derickbessa.github.io" target="_blank">derickbessa.github.io</a>
     </div>
   </div>
 
   <div class="section">
     <div class="section-title">Resumo Profissional</div>
     <div class="summary">
-      Desenvolvedor Full-Stack com experiência em React, Angular e React Native no frontend; Node.js, Java/Spring Boot, .NET e Python/FastAPI no backend. Trabalhei em projetos de pesquisa no IFCE conectando sistemas web, mobile e módulos de IA. Fundador do <strong>TáNaLista</strong>, SaaS de gestão de eventos com check-in via QR Code.
+      Desenvolvedor Full-Stack em formação (Ciência da Computação – IFCE), estagiário na Agilean com foco em Java/Spring Boot e .NET/C#. Passei por dois laboratórios de pesquisa do IFCE e construí produtos pessoais completos, com autenticação, pagamentos, IA e testes automatizados. Assumo o produto de ponta a ponta, com atenção a segurança, performance e uso de IA generativa no fluxo de desenvolvimento.
     </div>
   </div>
 
@@ -228,11 +240,11 @@
   <div class="section">
     <div class="section-title">Habilidades Técnicas</div>
     <div class="skills-grid">
+      <div class="skill-category"><strong>Backend:</strong> .NET/C#, EF Core, Java/Spring Boot, Node.js, Python, APIs REST, JWT/OAuth2</div>
+      <div class="skill-category"><strong>Bancos de Dados:</strong> PostgreSQL, SQL Server, SQLite, MySQL, Supabase (Postgres + RLS)</div>
       <div class="skill-category"><strong>Frontend:</strong> React.js, Next.js, Angular, React Native, TypeScript, Tailwind CSS</div>
-      <div class="skill-category"><strong>Backend:</strong> Node.js, Java/Spring Boot, .NET/C#, Python/FastAPI, APIs REST, JWT/OAuth2</div>
-      <div class="skill-category"><strong>Bancos de Dados:</strong> PostgreSQL, SQLite, MySQL</div>
-      <div class="skill-category"><strong>Testes:</strong> Vitest, Testing Library, xUnit</div>
-      <div class="skill-category"><strong>DevOps &amp; Ferramentas:</strong> Docker, Git, GitHub Actions, Vercel, Swagger/OpenAPI</div>
+      <div class="skill-category"><strong>Testes:</strong> xUnit, Vitest, Testing Library, Jest, pytest</div>
+      <div class="skill-category"><strong>DevOps &amp; IA:</strong> Docker, Git, GitHub Actions, Azure, Claude Code, Vercel, Railway, Swagger/OpenAPI</div>
     </div>
   </div>
 
@@ -241,15 +253,30 @@
 
     <div class="job">
       <div class="job-header">
+        <div class="job-title-company">Agilean</div>
+        <div class="job-date">Mai 2026 – Atual</div>
+      </div>
+      <div class="job-position">Estagiário de Desenvolvimento</div>
+      <ul>
+        <li>Resolvo cards de backlog full-stack (bugs, novas funcionalidades e manutenção evolutiva) em React, Node.js e .NET, atuando em APIs REST, modelagem de dados e integração de serviços de terceiros.</li>
+        <li>Implementei hooks customizados de instrumentação de eventos (Mixpanel), fornecendo dados que subsidiaram o PO na identificação de dead clicks e na otimização de fluxos de navegação.</li>
+        <li>Reduzi o volume de chamadas redundantes à API implementando cache e revalidação seletiva com TanStack Query (React Query), diminuindo o tráfego de rede e melhorando a responsividade percebida.</li>
+        <li>Uso Claude Code no fluxo diário de desenvolvimento — skills customizadas, documentação técnica e múltiplos desenvolvimentos em paralelo via git worktrees — além de automações de rotina (cron jobs) orquestradas com Hermes para tarefas recorrentes do time.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
         <div class="job-title-company">LabVicia – IFCE, Campus Fortaleza</div>
-        <div class="job-date">Set 2025 – Atual</div>
+        <div class="job-date">Jul 2025 – Atual</div>
       </div>
       <div class="job-position">Desenvolvedor Full Stack · Bolsista de Pesquisa</div>
+      <div class="job-subtitle">SaaS acadêmico.</div>
       <ul>
-        <li>Melhorei o desempenho das listagens com paginação e redução de chamadas desnecessárias à API, tornando o carregamento de tabelas mais rápido.</li>
-        <li>Reescrevi o módulo de inbox com scroll infinito e atualização automática, eliminando a necessidade de recarregar a página para ver novas mensagens.</li>
-        <li>Adicionei suporte a 4 idiomas (PT, EN, ES, DE) com troca dinâmica, permitindo que equipes internacionais usem o sistema sem necessidade de novo deploy.</li>
-        <li>Padronizei os componentes visuais com Angular Material, deixando o sistema mais consistente e facilitando o desenvolvimento de novas telas.</li>
+        <li>Projetei os fluxos centrais desde o zero: alocação de consultores, matrículas, feed de turma e chat com paginação por cursor.</li>
+        <li>Resolvi gargalo de performance em listagens com milhares de registros (paginação + cache + virtual scrolling), cortando 75% do tempo de resposta.</li>
+        <li>Treinei 2 novos integrantes do time: apresentei a arquitetura, propus atividades e os orientei durante a execução das tarefas, além de revisar PRs antes do merge.</li>
+        <li>Resolvi incidentes de produção com erros 500 no banco: rollback imediato, correção paliativa para o cliente, depois correção definitiva da causa raiz.</li>
       </ul>
     </div>
 
@@ -258,24 +285,11 @@
         <div class="job-title-company">LAPISCO – Laboratório de Pesquisa do IFCE, Campus Fortaleza</div>
         <div class="job-date">Jun 2024 – Mar 2026</div>
       </div>
-      <div class="job-position">Pesquisador Bolsista · Visão Computacional &amp; Desenvolvimento Full Stack</div>
+      <div class="job-position">Pesquisador Bolsista</div>
       <ul>
-        <li>Conectei o módulo de visão computacional em Python/FastAPI ao backend Java/Spring Boot, fazendo os dois sistemas se comunicarem via API sem afetar a performance um do outro.</li>
-        <li>Trabalhei no fluxo completo da aplicação — da captura de imagem no app React Native até o retorno do resultado no backend Java — garantindo que os dados fluíssem corretamente entre as camadas.</li>
-        <li>Refatorei APIs no backend Java organizando melhor as responsabilidades de cada parte do código, facilitando a leitura e manutenção por outros membros da equipe.</li>
-        <li>Criei dashboards em Python para acompanhar os resultados do treinamento dos modelos, ajudando a equipe a identificar problemas e tomar decisões com base em dados reais.</li>
-      </ul>
-    </div>
-
-    <div class="job">
-      <div class="job-header">
-        <div class="job-title-company">Gomes &amp; Araújo Advocacia – Freelancer</div>
-        <div class="job-date">2025</div>
-      </div>
-      <div class="job-position">Desenvolvedor Front-End</div>
-      <ul>
-        <li>Desenvolvi uma landing page completa em React com 8 seções e layout responsivo, sem usar bibliotecas de UI prontas, o que deixou o site mais leve e rápido.</li>
-        <li>Criei um backend em Node.js para envio de emails e integração com WhatsApp, permitindo que visitantes entrassem em contato diretamente pela página.</li>
+        <li>Integrei o módulo de visão computacional (Python/FastAPI) ao backend Java/Spring Boot via API REST, cobrindo o fluxo ponta a ponta — captura de imagem no app React Native, processamento e retorno do resultado — com serviços desacoplados, sem impacto de performance entre eles.</li>
+        <li>Refatorei as APIs do backend Java, reorganizando responsabilidades entre camadas. Resultado: código mais legível e fácil de manter pelo resto da equipe.</li>
+        <li>Criei dashboards em Python para acompanhar métricas de treinamento dos modelos, dando à equipe visibilidade para identificar problemas e decidir com base em dados.</li>
       </ul>
     </div>
 
@@ -286,28 +300,38 @@
 
     <div class="project">
       <div class="project-header">
-        <div class="project-title">AgileShop – Catálogo de Produtos</div>
-        <div class="project-tags">React 19 · TypeScript · .NET 10 · EF Core · SQLite</div>
+        <div class="project-title">Sentinela – Monitor de saúde de plataforma em tempo real</div>
+        <div class="project-tags">Python</div>
       </div>
-      <div class="project-subtitle">Desafio técnico fullstack entregue em 4 dias para processo seletivo na Agilean</div>
+      <div class="project-subtitle">Hackathon interno, Agilean</div>
       <ul>
-        <li>Desenvolvi a API completa em .NET 10 com CRUD de produtos, filtros por nome, categoria, disponibilidade e ordenação, além de paginação — seguindo boas práticas de organização de código.</li>
-        <li>Fui além dos requisitos do desafio e adicionei por conta própria: carrinho de compras, página de detalhe do produto com itens similares, slider de preço interativo, dashboard com gráficos e dark mode — todos inspirados em plataformas como Amazon e Mercado Livre.</li>
-        <li>Gerenciei o estado global da aplicação com Context API, aplicando filtros e paginação no cliente para evitar requisições desnecessárias ao backend.</li>
-        <li>Escrevi testes no frontend (Vitest + Testing Library) e no backend (xUnit), chegando a ~70% de cobertura em 4 dias de desenvolvimento.</li>
+        <li>Implementei um cliente WebSocket com tail em tempo real sobre o Loki (Grafana Cloud), com reconexão automática e backfill, cruzando os erros com o SQL Server de produção (join entre 3 tabelas) para identificar a empresa/obra afetada.</li>
+        <li>Detecção de anomalia por z-score contra o baseline histórico das 4 semanas anteriores, publicando o resumo automaticamente no Teams via Incoming Webhook — avaliei Bot Framework/Azure Bot Service e descartei por overhead desnecessário no escopo do MVP.</li>
+        <li>Arquitetado e implementado com apoio do Claude Code, com 211 testes automatizados (pytest) cobrindo o pipeline.</li>
       </ul>
     </div>
 
     <div class="project">
       <div class="project-header">
-        <div class="project-title">SFA – Sistema de Fiscalização Automotiva (Leitor de Placas)</div>
-        <div class="project-tags">Python/FastAPI · Java/Spring Boot · YOLOv8 · PaddleOCR · React Native</div>
+        <div class="project-title">Até o Altar – App de planejamento de casamento</div>
+        <div class="project-tags">Expo/React Native · TypeScript · Supabase</div>
       </div>
-      <div class="project-subtitle">Pipeline fullstack de reconhecimento automático de placas veiculares — LAPISCO/IFCE</div>
       <ul>
-        <li>Conectei o módulo de reconhecimento de placas (Python/FastAPI) ao backend Java/Spring Boot via API REST, permitindo que o app React Native enviasse imagens e recebesse os resultados em tempo real.</li>
-        <li>Implementei o pipeline de leitura de placas combinando detecção com YOLOv8, pré-processamento com OpenCV e reconhecimento de caracteres com PaddleOCR, chegando a 97% de precisão em um dataset de ~2.000 imagens.</li>
-        <li>Adicionei suporte aos três formatos de placa brasileira (antiga, Mercosul e moto), com correção automática de caracteres e ajuste de orientação da imagem para lidar com fotos tortas ou mal enquadradas.</li>
+        <li>Arquitetei o backend em Supabase (Auth, Storage, Edge Functions), com RLS para controle de acesso por usuário.</li>
+        <li>Isolei a IA generativa (NVIDIA NIM/Llama 3.1) numa Edge Function própria, mantendo a chave da API fora do cliente.</li>
+        <li>Lembretes automáticos gerados no banco via pg_cron, sem depender de serviço externo.</li>
+      </ul>
+    </div>
+
+    <div class="project">
+      <div class="project-header">
+        <div class="project-title">AgileShop – Catálogo de produtos</div>
+        <div class="project-tags">React 19 · TypeScript · .NET 10 · EF Core · SQLite</div>
+      </div>
+      <div class="project-subtitle">Desafio técnico entregue em 4 dias para processo seletivo na Agilean</div>
+      <ul>
+        <li>API completa em .NET 10 (CRUD, filtros, paginação) e, além do escopo, adicionei carrinho de compras, dashboard com gráficos e dark mode.</li>
+        <li>~70% de cobertura de testes (Vitest + xUnit) em 4 dias de desenvolvimento.</li>
       </ul>
     </div>
 
